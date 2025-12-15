@@ -3,6 +3,7 @@ import "./src/styles/global.css";
 import { ThemeModeScript } from "flowbite-react";
 import { ThemeInit } from "../../.flowbite-react/init";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 ---
 
 <!doctype html>
@@ -22,5 +23,6 @@ import Navigation from "../components/Navigation";
     <ThemeInit />
     <Navigation client:load />
     <slot />
+    <Footer client:load />
   </body>
 </html>
