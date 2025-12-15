@@ -7,8 +7,6 @@ tags:
   - architecture
   - edge
   - serverless
-author:
-  name: "Oskar Barcz"
 coverUrl: "https://images.unsplash.com/photo-1527430253228-e93688616381?q=80&w=1640&auto=format&fit=crop"
 ---
 

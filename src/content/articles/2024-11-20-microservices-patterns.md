@@ -7,8 +7,6 @@ tags:
   - microservices
   - architecture
   - distributed-systems
-author:
-  name: "Oskar Barcz"
 coverUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1640&auto=format&fit=crop"
 ---
 

@@ -12,11 +12,6 @@ export default function Footer() {
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid w-full justify-between gap-8 py-8 md:flex md:grid-cols-1">
           <div className="flex flex-col gap-4">
-            <FooterBrand
-              href="/"
-              name="Oskar Barcz"
-              className="text-2xl font-bold"
-            />
             <p className="max-w-md text-sm text-gray-600 dark:text-gray-400">
               Backend developer passionate about distributed systems, API design, and building scalable web applications.
               Sharing insights on modern web development and system architecture.

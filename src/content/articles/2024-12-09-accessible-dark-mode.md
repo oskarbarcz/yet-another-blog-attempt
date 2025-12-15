@@ -7,8 +7,6 @@ tags:
   - a11y
   - design
   - theming
-author:
-  name: "Oskar Barcz"
 coverUrl: "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1640&auto=format&fit=crop"
 ---
 

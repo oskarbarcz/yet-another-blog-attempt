@@ -7,8 +7,6 @@ tags:
   - distributed-systems
   - architecture
   - consistency
-author:
-  name: "Oskar Barcz"
 coverUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1640&auto=format&fit=crop"
 ---
 

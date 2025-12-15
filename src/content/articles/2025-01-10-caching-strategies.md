@@ -7,8 +7,6 @@ tags:
   - caching
   - redis
   - performance
-author:
-  name: "Oskar Barcz"
 coverUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1640&auto=format&fit=crop"
 ---
 

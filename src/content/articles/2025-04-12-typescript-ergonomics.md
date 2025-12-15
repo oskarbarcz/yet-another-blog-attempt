@@ -6,8 +6,6 @@ readTime: "9 min"
 tags:
   - typescript
   - dx
-author:
-  name: "Oskar Barcz"
 coverUrl: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1640&auto=format&fit=crop"
 ---
 

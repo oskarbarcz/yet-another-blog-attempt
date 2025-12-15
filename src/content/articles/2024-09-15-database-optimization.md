@@ -7,8 +7,6 @@ tags:
   - database
   - postgresql
   - performance
-author:
-  name: "Oskar Barcz"
 coverUrl: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=1640&auto=format&fit=crop"
 ---
 

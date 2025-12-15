@@ -8,10 +8,6 @@ const articles = defineCollection({
     date: z.date(),
     readTime: z.string(),
     tags: z.array(z.string()).default([]),
-    author: z.object({
-      name: z.string(),
-      avatarUrl: z.string().url().optional(),
-    }),
     coverUrl: z.string().url().optional(),
   }),
 });
