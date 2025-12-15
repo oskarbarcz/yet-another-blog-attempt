@@ -14,6 +14,9 @@
   --color-brand-800: #065f46;
   --color-brand-900: #064e3b;
   --color-brand-950: #022c22;
+
+  --font-family-mono: "Roboto Mono", ui-monospace, monospace;
+  --font-family-slab: "Roboto Slab", ui-serif, serif;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { DarkThemeToggle, Pagination, Button } from "flowbite-react";
-import { FaCalendarDays, FaClock, FaTag, FaCode, FaArrowRight } from "react-icons/fa6";
+import { Pagination, Button } from "flowbite-react";
+import { FaCalendarDays, FaClock, FaTag, FaArrowRight } from "react-icons/fa6";
 
 interface Author {
   name: string;
@@ -53,18 +53,11 @@ export default function ArticlesList({ articles }: ArticlesListProps) {
         </div>
       </div>
       
-      <div className="absolute top-6 right-6 z-10">
-        <DarkThemeToggle />
-      </div>
-
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mb-16 space-y-4">
-          <div className="flex items-center gap-3 justify-center">
-            <FaCode className="h-8 w-8 text-brand-600 dark:text-brand-400" />
-            <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-              Tech Blog
-            </h1>
-          </div>
+          <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-6xl text-center">
+            Latest publications
+          </h1>
           <p className="mx-auto max-w-2xl text-center text-lg leading-relaxed text-gray-600 dark:text-gray-400">
             Deep dives into backend development, system design, and modern web architecture
           </p>
