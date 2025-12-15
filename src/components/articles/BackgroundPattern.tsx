@@ -1,6 +1,6 @@
 export default function BackgroundPattern() {
   return (
-    <div className="absolute inset-0 size-full opacity-30">
+    <div className="pointer-events-none absolute inset-0 size-full opacity-30">
       <div className="relative h-full w-full select-none">
         <img
           className="absolute right-0 min-w-dvh dark:hidden"
