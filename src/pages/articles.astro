@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import ArticlesList from "../components/ArticlesList";
+import Layout from "../layouts/Layout.astro";
+
+// Fetch all articles from the content collection
+const allArticles = await getCollection("articles");
+
+// Sort articles by date (newest first) and transform data
+const articles = allArticles
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .map((article) => ({
+    slug: article.slug,
+    title: article.data.title,
+    excerpt: article.data.excerpt,
+    date: article.data.date.toISOString(),
+    readTime: article.data.readTime,
+    tags: article.data.tags,
+    author: article.data.author,
+    coverUrl: article.data.coverUrl,
+  }));
+---
+
+<Layout>
+  <ArticlesList articles={articles} client:load />
+</Layout>
