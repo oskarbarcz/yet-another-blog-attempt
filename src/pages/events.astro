@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import EventTimeline from "../components/events/EventTimeline";
+
+const allEvents = await getCollection("events");
+const events = allEvents
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .map((e) => ({
+    title: e.data.title,
+    role: e.data.role,
+    date: e.data.date.toISOString(),
+    city: e.data.city,
+    description: e.data.description,
+    organizer: e.data.organizer,
+    photos: e.data.photos ?? [],
+    links: e.data.links ?? {},
+  }));
+---
+
+<Layout>
+  <main class="relative">
+    <div class="relative mx-auto max-w-5xl px-4 pt-10 pb-16 sm:px-6 lg:px-8 lg:pt-16 lg:pb-24">
+      <header class="mb-8">
+        <h1 class="font-family-slab text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Events</h1>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Talks, panels, and meetups I’ve attended or participated in.</p>
+      </header>
+
+      <section aria-label="Events timeline">
+        <EventTimeline client:load events={events} />
+      </section>
+    </div>
+  </main>
+</Layout>
