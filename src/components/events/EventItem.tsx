@@ -1,11 +1,8 @@
-import { FaArrowRight, FaArrowUpRightFromSquare, FaFacebook, FaLinkedin, FaYoutube, FaLocationDot, FaUserGroup } from "react-icons/fa6";
-import {
-  Timeline,
-  TimelineContent,
-  TimelineItem,
-  TimelinePoint,
-} from "flowbite-react";
+import { FaLocationDot, FaUserGroup } from "react-icons/fa6";
+import { Timeline, TimelineContent, TimelineItem, TimelinePoint } from "flowbite-react";
 import RoleBadge from "./RoleBadge";
+import PhotoGallery from "./PhotoGallery";
+import EventSocialLinks from "./EventSocialLinks";
 
 export interface EventLinks {
   article?: string;
@@ -85,74 +82,11 @@ export default function EventItem({ event }: EventItemProps) {
             {event.description}
           </p>
 
-          {hasPhotos && (
-            <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
-              {event.photos!.slice(0, 3).map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt={`${event.title} photo ${i + 1}`}
-                  className="h-28 w-full rounded-lg object-cover sm:h-32"
-                  loading="lazy"
-                />
-              ))}
-            </div>
-          )}
+          {hasPhotos && <PhotoGallery photos={event.photos} title={event.title} />}
 
-          {links && Object.values(links).some(Boolean) && (
-            <div className="mt-3 flex flex-wrap items-center gap-2">
-              {links.article && (
-                <a
-                  href={links.article}
-                  className="inline-flex items-center gap-1 rounded-full border border-gray-200 px-2.5 py-1 text-xs font-medium text-gray-700 hover:text-brand-600 hover:border-brand-200 dark:border-gray-700 dark:text-gray-300 dark:hover:text-brand-400"
-                >
-                  Related article
-                  <FaArrowRight className="h-3 w-3" />
-                </a>
-              )}
-              {links.youtube && (
-                <a
-                  href={links.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700 hover:bg-red-100 dark:bg-red-400/10 dark:text-red-400"
-                >
-                  <FaYoutube className="h-3.5 w-3.5" /> YouTube
-                </a>
-              )}
-              {links.linkedin && (
-                <a
-                  href={links.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 rounded-full bg-sky-50 px-2.5 py-1 text-xs font-medium text-sky-700 hover:bg-sky-100 dark:bg-sky-400/10 dark:text-sky-400"
-                >
-                  <FaLinkedin className="h-3.5 w-3.5" /> LinkedIn
-                </a>
-              )}
-              {links.facebook && (
-                <a
-                  href={links.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 hover:bg-blue-100 dark:bg-blue-400/10 dark:text-blue-400"
-                >
-                  <FaFacebook className="h-3.5 w-3.5" /> Facebook
-                </a>
-              )}
-              {links.other && (
-                <a
-                  href={links.other}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 rounded-full border border-gray-200 px-2.5 py-1 text-xs font-medium text-gray-700 hover:text-brand-600 hover:border-brand-200 dark:border-gray-700 dark:text-gray-300 dark:hover:text-brand-400"
-                >
-                  <FaArrowUpRightFromSquare className="h-3 w-3" /> Link
-                </a>
-              )}
-            </div>
-          )}
+          <EventSocialLinks links={links} />
         </div>
+
       </TimelineContent>
     </TimelineItem>
   );

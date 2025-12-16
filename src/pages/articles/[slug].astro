@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import ArticleTags from "../../components/articles/ArticleTags.tsx";
+import ZoomableImage from "../../components/shared/ZoomableImage";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -27,7 +28,7 @@ const { Content, headings } = await entry.render();
       <header class="mb-10">
         {entry.data.coverUrl && (
           <div class="mb-6 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800">
-            <img src={entry.data.coverUrl} alt={entry.data.title} class="w-full h-64 object-cover" />
+            <ZoomableImage client:load src={entry.data.coverUrl} alt={entry.data.title} className="w-full h-64" modalTitle={entry.data.title} />
           </div>
         )}
         <nav class="mb-6">
