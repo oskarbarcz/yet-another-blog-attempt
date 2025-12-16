@@ -60,9 +60,21 @@ export default function Navigation() {
 
         {/* Desktop nav */}
         <NavbarCollapse className="hidden md:order-2 md:ml-auto md:flex md:items-center md:gap-6">
-          <NavbarLink href="/">Strona główna</NavbarLink>
-          <NavbarLink href="/articles">Publikacje</NavbarLink>
-          <NavbarLink href="/events">Wydarzenia</NavbarLink>
+          <NavbarLink className="hover:text-brand-500! duration-100" href="/">
+            Strona główna
+          </NavbarLink>
+          <NavbarLink
+            className="hover:text-brand-500! duration-100"
+            href="/articles"
+          >
+            Publikacje
+          </NavbarLink>
+          <NavbarLink
+            className="hover:text-brand-500! duration-100"
+            href="/events"
+          >
+            Wydarzenia
+          </NavbarLink>
         </NavbarCollapse>
       </Navbar>
 
@@ -78,11 +90,11 @@ export default function Navigation() {
           <ul className="divide-y divide-gray-200 dark:divide-gray-800">
             <li>
               <a
-                href="/"
+                href="/public"
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-3 rounded-lg px-4 py-4 text-lg font-semibold text-gray-900 transition-colors hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-800/70"
               >
-                <FaHouse className="h-5 w-5 text-brand-600 dark:text-brand-400" />
+                <FaHouse className="text-brand-600 dark:text-brand-400 h-5 w-5" />
                 Strona główna
               </a>
             </li>
@@ -92,7 +104,7 @@ export default function Navigation() {
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-3 rounded-lg px-4 py-4 text-lg font-semibold text-gray-900 transition-colors hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-800/70"
               >
-                <FaNewspaper className="h-5 w-5 text-brand-600 dark:text-brand-400" />
+                <FaNewspaper className="text-brand-600 dark:text-brand-400 h-5 w-5" />
                 Publikacje
               </a>
             </li>
@@ -102,7 +114,7 @@ export default function Navigation() {
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-3 rounded-lg px-4 py-4 text-lg font-semibold text-gray-900 transition-colors hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-800/70"
               >
-                <FaCalendarDays className="h-5 w-5 text-brand-600 dark:text-brand-400" />
+                <FaCalendarDays className="text-brand-600 dark:text-brand-400 h-5 w-5" />
                 Wydarzenia
               </a>
             </li>

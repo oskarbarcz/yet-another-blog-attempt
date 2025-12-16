@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { ARTICLES_PER_PAGE } from "../constants";
-import ArticlesHeader from "./articles/ArticlesHeader";
-import ArticlesGrid from "./articles/ArticlesGrid";
-import ArticleCard from "./articles/ArticleCard";
-import ArticlesPager from "./articles/ArticlesPager";
-import type { Article } from "./articles/types";
+import { ARTICLES_PER_PAGE } from "../../constants";
+import ArticlesHeader from "./ArticlesHeader.tsx";
+import ArticlesGrid from "./ArticlesGrid.tsx";
+import ArticleCard from "./ArticleCard.tsx";
+import ArticlesPager from "./ArticlesPager.tsx";
+import type { Article } from "./types.ts";
 
 interface ArticlesListProps {
   articles: Article[];

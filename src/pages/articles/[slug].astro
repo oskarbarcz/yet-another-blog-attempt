@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Meta from "../../components/Meta.astro";
+import Meta from "../../components/shared/Meta.astro";
 import ArticleTags from "../../components/articles/ArticleTags.tsx";
 import PhotoSwipeInit from "../../components/shared/PhotoSwipeInit";
 import type { CollectionEntry } from "astro:content";
@@ -37,17 +37,19 @@ const { Content } = await entry.render();
     class="relative mx-auto max-w-5xl px-4 pt-10 pb-16 sm:px-6 lg:px-8 lg:pt-16 lg:pb-24"
   >
     <header class="mb-10">
-      {entry.data.coverUrl && (
-        <div class="mb-6 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800">
-          <img
-            src={entry.data.coverUrl}
-            alt={entry.data.title}
-            class="h-64 w-full object-cover"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-      )}
+      {
+        entry.data.coverUrl && (
+          <div class="mb-6 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800">
+            <img
+              src={entry.data.coverUrl}
+              alt={entry.data.title}
+              class="h-64 w-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        )
+      }
       <nav class="mb-6">
         <a
           href="/articles"
