@@ -5,14 +5,12 @@ interface ZoomableImageProps {
   src: string;
   alt?: string;
   className?: string;
-  modalTitle?: string;
 }
 
 export default function ZoomableImage({
   src,
   alt = "",
   className = "",
-  modalTitle,
 }: ZoomableImageProps) {
   const [open, setOpen] = useState(false);
 

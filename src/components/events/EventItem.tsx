@@ -1,10 +1,5 @@
 import { FaLocationDot, FaUserGroup } from "react-icons/fa6";
-import {
-  Timeline,
-  TimelineContent,
-  TimelineItem,
-  TimelinePoint,
-} from "flowbite-react";
+import { TimelineContent, TimelineItem, TimelinePoint } from "flowbite-react";
 import RoleBadge from "./RoleBadge";
 import PhotoGallery from "./PhotoGallery";
 import EventSocialLinks from "./EventSocialLinks";

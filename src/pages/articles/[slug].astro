@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props as Props;
-const { Content, headings } = await entry.render();
+const { Content } = await entry.render();
 ---
 
 <Layout>
@@ -46,7 +46,6 @@ const { Content, headings } = await entry.render();
                 src={entry.data.coverUrl}
                 alt={entry.data.title}
                 className="w-full h-64"
-                modalTitle={entry.data.title}
               />
             </div>
           )
