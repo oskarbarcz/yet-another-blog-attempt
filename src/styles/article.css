@@ -160,7 +160,7 @@
 /* Dark theme: use dark scrollbars on code elements */
 .dark .article-content pre {
   scrollbar-width: thin; /* Firefox */
-  scrollbar-color: rgb(209 213 219) transparent; /* gray-800 thumb on transparent track */
+  scrollbar-color: rgb(209 213 219) transparent; /* gray-300 thumb on transparent track */
 }
 
 .dark .article-content pre::-webkit-scrollbar-thumb {
