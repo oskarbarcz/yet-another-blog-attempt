@@ -21,28 +21,66 @@
   margin-bottom: 0.6em;
   scroll-margin-top: 6rem;
 }
-.article-content h1 { font-size: 2rem; }
-.article-content h2 { font-size: 1.5rem; }
-.article-content h3 { font-size: 1.25rem; }
+
+.article-content h1 {
+  font-size: 2rem;
+}
+
+.article-content h2 {
+  font-size: 1.5rem;
+}
+
+.article-content h3 {
+  font-size: 1.25rem;
+}
 
 /* Paragraphs */
-.article-content p { margin: 1em 0; }
+.article-content p {
+  margin: 1em 0;
+}
 
 /* Lists */
 .article-content ul,
-.article-content ol { padding-left: 1.25rem; margin: 1em 0; }
-.article-content ul { list-style: disc; list-style-position: outside; }
-.article-content ol { list-style: decimal; list-style-position: outside; }
-.article-content li { margin: 0.25em 0; }
+.article-content ol {
+  padding-left: 1.25rem;
+  margin: 1em 0;
+}
+
+.article-content ul {
+  list-style: disc outside;
+}
+
+.article-content ol {
+  list-style: decimal outside;
+}
+
+.article-content li {
+  margin: 0.25em 0;
+}
+
 .article-content li > ul,
-.article-content li > ol { margin-top: 0.25em; margin-bottom: 0.25em; }
+.article-content li > ol {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
 /* Nested list marker styles */
-.article-content li > ul { list-style: circle; }
-.article-content li > ul ul { list-style: square; }
+.article-content li > ul {
+  list-style: circle;
+}
+
+.article-content li > ul ul {
+  list-style: square;
+}
 
 /* Ensure list markers are visible in both themes */
-.article-content li::marker { color: rgb(75 85 99); /* gray-600 */ }
-.dark .article-content li::marker { color: rgb(156 163 175); /* gray-400 */ }
+.article-content li::marker {
+  color: rgb(75 85 99); /* gray-600 */
+}
+
+.dark .article-content li::marker {
+  color: rgb(156 163 175); /* gray-400 */
+}
 
 /* Blockquote */
 .article-content blockquote {
@@ -52,6 +90,7 @@
   margin: 1.25em 0;
   font-style: italic;
 }
+
 .dark .article-content blockquote {
   border-left-color: rgb(31 41 55); /* gray-800 */
   color: rgb(156 163 175); /* gray-400 */
@@ -66,6 +105,7 @@
   padding: 0.15em 0.35em;
   border-radius: 0.25rem;
 }
+
 .dark .article-content code {
   background: transparent;
   color: rgb(229 231 235); /* gray-200 */
@@ -81,7 +121,13 @@
   border-radius: 0.5rem;
   margin: 1.25em 0;
 }
-.article-content pre code { background: transparent; padding: 0; color: inherit; }
+
+.article-content pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
 .dark .article-content pre {
   background: rgb(17 24 39); /* gray-900 */
   color: rgb(229 231 235); /* gray-200 */
@@ -94,17 +140,25 @@
   margin: 1.25em 0;
   font-size: 0.95em;
 }
+
 .article-content thead th {
   text-align: left;
   border-bottom: 2px solid rgb(229 231 235); /* gray-200 */
   padding: 0.5rem 0.75rem;
 }
+
 .article-content tbody td {
   border-top: 1px solid rgb(229 231 235); /* gray-200 */
   padding: 0.5rem 0.75rem;
 }
-.dark .article-content thead th { border-bottom-color: rgb(55 65 81); /* gray-700 */ }
-.dark .article-content tbody td { border-top-color: rgb(55 65 81); /* gray-700 */ }
+
+.dark .article-content thead th {
+  border-bottom-color: rgb(55 65 81); /* gray-700 */
+}
+
+.dark .article-content tbody td {
+  border-top-color: rgb(55 65 81); /* gray-700 */
+}
 
 /* Horizontal rule */
 .article-content hr {
@@ -112,7 +166,10 @@
   border-top: 1px solid rgb(229 231 235); /* gray-200 */
   margin: 2rem 0;
 }
-.dark .article-content hr { border-top-color: rgb(55 65 81); /* gray-700 */ }
+
+.dark .article-content hr {
+  border-top-color: rgb(55 65 81); /* gray-700 */
+}
 
 /* Media */
 .article-content img,
@@ -123,9 +180,20 @@
   margin: 1.25em auto;
   border-radius: 0.5rem;
 }
-.article-content figure { margin: 1.25em 0; }
-.article-content figcaption { text-align: center; color: rgb(107 114 128); font-size: 0.9em; }
-.dark .article-content figcaption { color: rgb(156 163 175); }
+
+.article-content figure {
+  margin: 1.25em 0;
+}
+
+.article-content figcaption {
+  text-align: center;
+  color: rgb(107 114 128);
+  font-size: 0.9em;
+}
+
+.dark .article-content figcaption {
+  color: rgb(156 163 175);
+}
 
 /* Links */
 .article-content a {
@@ -133,9 +201,18 @@
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.article-content a:hover { color: var(--color-brand-700); }
-.dark .article-content a { color: var(--color-brand-400); }
-.dark .article-content a:hover { color: var(--color-brand-300); }
+
+.article-content a:hover {
+  color: var(--color-brand-700);
+}
+
+.dark .article-content a {
+  color: var(--color-brand-400);
+}
+
+.dark .article-content a:hover {
+  color: var(--color-brand-300);
+}
 
 /* Misc */
 .article-content kbd {
@@ -147,13 +224,26 @@
   font-family: var(--font-family-mono);
   font-size: 0.85em;
 }
+
 .dark .article-content kbd {
   background: rgb(31 41 55);
   border-color: rgb(55 65 81);
 }
-.article-content mark { background: #fff6a9; color: inherit; padding: 0.05em 0.2em; border-radius: 0.2em; }
-.dark .article-content mark { background: #4a3f15; }
-.article-content del { opacity: 0.75; }
+
+.article-content mark {
+  background: #fff6a9;
+  color: inherit;
+  padding: 0.05em 0.2em;
+  border-radius: 0.2em;
+}
+
+.dark .article-content mark {
+  background: #4a3f15;
+}
+
+.article-content del {
+  opacity: 0.75;
+}
 
 /* Details/Summary */
 .article-content details {
@@ -163,7 +253,12 @@
   padding: 0.75rem 1rem;
   margin: 1rem 0;
 }
-.article-content summary { cursor: pointer; font-weight: 600; }
+
+.article-content summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
 .dark .article-content details {
   background: rgb(17 24 39);
   border-color: rgb(55 65 81);

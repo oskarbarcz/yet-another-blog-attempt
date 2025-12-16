@@ -5,7 +5,11 @@ import { ThemeModeScript } from "flowbite-react";
 import { ThemeInit } from "../../.flowbite-react/init";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import { DEFAULT_SITE_DESCRIPTION, DEFAULT_SITE_TITLE, SITE_TITLE_SUFFIX } from "../constants";
+import {
+  DEFAULT_SITE_DESCRIPTION,
+  DEFAULT_SITE_TITLE,
+  SITE_TITLE_SUFFIX,
+} from "../constants";
 ---
 
 <!doctype html>
@@ -16,7 +20,11 @@ import { DEFAULT_SITE_DESCRIPTION, DEFAULT_SITE_TITLE, SITE_TITLE_SUFFIX } from 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>
-      {(Astro.slots.has('title') ? await Astro.slots.render('title') : DEFAULT_SITE_TITLE) + SITE_TITLE_SUFFIX}
+      {
+        (Astro.slots.has("title")
+          ? await Astro.slots.render("title")
+          : DEFAULT_SITE_TITLE) + SITE_TITLE_SUFFIX
+      }
     </title>
 
     <slot name="head" />

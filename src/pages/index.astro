@@ -35,7 +35,11 @@ const latestEvents = allEvents
 
 <Layout>
   <Fragment slot="title">Mój cyfrowy ogród</Fragment>
-  <Meta slot="head" title="Mój cyfrowy ogród" description="Mój cyfrowy ogród: publikacje o architekturze, wydajności, bezpieczeństwie API oraz React/Astro." />
+  <Meta
+    slot="head"
+    title="Mój cyfrowy ogród"
+    description="Mój cyfrowy ogród: publikacje o architekturze, wydajności, bezpieczeństwie API oraz React/Astro."
+  />
   <main>
     <HomeHero />
     <HomeLatestArticles articles={latestArticles} />

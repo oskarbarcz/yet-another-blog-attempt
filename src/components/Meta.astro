@@ -21,14 +21,24 @@ interface Props {
   authorName?: string;
 }
 
-const { title, description, url, image, type = "website", publishedTime, modifiedTime, authorName } = Astro.props as Props;
+const {
+  title,
+  description,
+  url,
+  image,
+  type = "website",
+  publishedTime,
+  modifiedTime,
+  authorName,
+} = Astro.props as Props;
 
 const effectiveTitle = `${title ?? DEFAULT_SITE_TITLE}${SITE_TITLE_SUFFIX}`;
 const effectiveDescription = description ?? DEFAULT_SITE_DESCRIPTION;
 const twitterCard = image ? "summary_large_image" : "summary";
-const canonical = (url && (url.startsWith("http://") || url.startsWith("https://")))
-  ? url
-  : `${SITE_ORIGIN}${url ?? Astro.url.pathname}`;
+const canonical =
+  url && (url.startsWith("http://") || url.startsWith("https://"))
+    ? url
+    : `${SITE_ORIGIN}${url ?? Astro.url.pathname}`;
 const isHome = Astro.url.pathname === "/";
 const resolvedAuthor = authorName ?? AUTHOR_NAME;
 ---
@@ -45,8 +55,16 @@ const resolvedAuthor = authorName ?? AUTHOR_NAME;
 {image && <meta property="og:image" content={image} />}
 <meta property="og:site_name" content={SITE_NAME} />
 <meta property="og:locale" content={OG_LOCALE} />
-{type === 'article' && publishedTime && <meta property="article:published_time" content={publishedTime} />}
-{type === 'article' && modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+{
+  type === "article" && publishedTime && (
+    <meta property="article:published_time" content={publishedTime} />
+  )
+}
+{
+  type === "article" && modifiedTime && (
+    <meta property="article:modified_time" content={modifiedTime} />
+  )
+}
 
 <!-- Twitter -->
 <meta name="twitter:card" content={twitterCard} />
@@ -57,36 +75,48 @@ const resolvedAuthor = authorName ?? AUTHOR_NAME;
 <link rel="canonical" href={canonical} />
 
 <!-- Structured Data -->
-{isHome && (
-  <script type="application/ld+json" is:inline set:html={JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: SITE_NAME,
-    url: SITE_ORIGIN,
-    publisher: {
-      '@type': 'Person',
-      name: PUBLISHER_NAME,
-    },
-  })} />
-)}
+{
+  isHome && (
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: SITE_NAME,
+        url: SITE_ORIGIN,
+        publisher: {
+          "@type": "Person",
+          name: PUBLISHER_NAME,
+        },
+      })}
+    />
+  )
+}
 
-{type === 'article' && publishedTime && (
-  <script type="application/ld+json" is:inline set:html={JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: title ?? DEFAULT_SITE_TITLE,
-    description: effectiveDescription,
-    datePublished: publishedTime,
-    ...(modifiedTime ? { dateModified: modifiedTime } : {}),
-    mainEntityOfPage: canonical,
-    author: {
-      '@type': 'Person',
-      name: resolvedAuthor,
-    },
-    publisher: {
-      '@type': 'Person',
-      name: PUBLISHER_NAME,
-    },
-    ...(image ? { image } : {}),
-  })} />
-)}
+{
+  type === "article" && publishedTime && (
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: title ?? DEFAULT_SITE_TITLE,
+        description: effectiveDescription,
+        datePublished: publishedTime,
+        ...(modifiedTime ? { dateModified: modifiedTime } : {}),
+        mainEntityOfPage: canonical,
+        author: {
+          "@type": "Person",
+          name: resolvedAuthor,
+        },
+        publisher: {
+          "@type": "Person",
+          name: PUBLISHER_NAME,
+        },
+        ...(image ? { image } : {}),
+      })}
+    />
+  )
+}

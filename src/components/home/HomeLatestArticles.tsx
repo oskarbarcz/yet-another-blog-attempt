@@ -6,7 +6,9 @@ interface HomeLatestArticlesProps {
   articles: Article[];
 }
 
-export default function HomeLatestArticles({ articles }: HomeLatestArticlesProps) {
+export default function HomeLatestArticles({
+  articles,
+}: HomeLatestArticlesProps) {
   if (!articles?.length) return null;
   return (
     <section className="relative">
@@ -17,7 +19,7 @@ export default function HomeLatestArticles({ articles }: HomeLatestArticlesProps
           </h2>
           <a
             href="/articles"
-            className="inline-flex items-center gap-1 text-sm font-medium text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300"
+            className="text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300 inline-flex items-center gap-1 text-sm font-medium"
           >
             Zobacz wszystkie
             <FaArrowRight className="h-3.5 w-3.5" />
