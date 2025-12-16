@@ -1,4 +1,6 @@
-import CompactEventItem, { type CompactEventData } from "./CompactEventItem";
+import CompactEventItem, {
+  type CompactEventData,
+} from "../events/CompactEventItem.tsx";
 import { FaArrowRight } from "react-icons/fa6";
 
 interface HomeLatestEventsProps {

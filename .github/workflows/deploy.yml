@@ -5,7 +5,7 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -33,23 +33,15 @@ jobs:
         with:
           path: ./dist
 
-  tag:
-    needs: build
+  release:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repository
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Release and push git tag
         run: "git tag $(jq -r '.version' package.json) && git push --tags"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  release:
-    needs: tag
-    runs-on: ubuntu-latest
-    steps:
-      - name: Clone repository
-        uses: actions/checkout@v4
       - name: Create a GitHub release
         run: "gh release create $(jq -r '.version' package.json) --generate-notes"
         env:

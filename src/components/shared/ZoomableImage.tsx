@@ -15,6 +15,9 @@ export default function ZoomableImage({
   const [open, setOpen] = useState(false);
 
   const handleBackdropClick = (event: ReactMouseEvent) => {
+    // Close when clicking on the dark area (backdrop). The wrapper below
+    // spans the whole viewport, and the image stops propagation so taps
+    // on the image won't close the modal.
     if (event.target === event.currentTarget) {
       setOpen(false);
     }
@@ -59,13 +62,14 @@ export default function ZoomableImage({
         }}
       >
         <div
-          className="flex items-center justify-center"
+          className="flex min-h-[100svh] w-screen items-center justify-center"
           onClick={handleBackdropClick}
         >
           <img
             src={src}
             alt={alt}
             className="max-h-[85vh] w-auto max-w-[95vw] object-contain"
+            onClick={(e) => e.stopPropagation()}
           />
         </div>
       </Modal>

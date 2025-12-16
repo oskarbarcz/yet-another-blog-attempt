@@ -1,4 +1,4 @@
-import RoleBadge from "../events/RoleBadge";
+import RoleBadge from "./RoleBadge.tsx";
 
 export interface CompactEventData {
   title: string;
