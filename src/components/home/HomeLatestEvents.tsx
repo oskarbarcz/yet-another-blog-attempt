@@ -10,7 +10,7 @@ export default function HomeLatestEvents({ events }: HomeLatestEventsProps) {
   return (
     <section className="relative">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="mb-4 flex items-end justify-between">
+        <div className="mb-4 flex items-center justify-between gap-4">
           <h2 className="font-family-slab text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Najnowsze wydarzenia
           </h2>
