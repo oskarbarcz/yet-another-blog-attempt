@@ -58,8 +58,10 @@ export default function ZoomableImage({
           },
         }}
       >
-        <div className="flex items-center justify-center"
-        onClick={handleBackdropClick}>
+        <div
+          className="flex items-center justify-center"
+          onClick={handleBackdropClick}
+        >
           <img
             src={src}
             alt={alt}
