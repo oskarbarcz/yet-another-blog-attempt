@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import ArticlesList from "../components/ArticlesList";
+import Meta from "../components/Meta.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Fetch all articles from the content collection
@@ -21,5 +22,7 @@ const articles = allArticles
 ---
 
 <Layout>
+  <Fragment slot="title">Wszystkie publikacje</Fragment>
+  <Meta slot="head" title="Wszystkie publikacje" description="Lista publikacji: architektura, wydajność, bezpieczeństwo API, React i Astro." />
   <ArticlesList articles={articles} client:load />
 </Layout>
