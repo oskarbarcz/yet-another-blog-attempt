@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Meta from "../components/Meta.astro";
 import EventTimeline from "../components/events/EventTimeline";
+import PhotoSwipeInit from "../components/shared/PhotoSwipeInit";
 
 const allEvents = await getCollection("events");
 const events = allEvents
@@ -42,8 +43,9 @@ const events = allEvents
       </header>
 
       <section aria-label="Oś czasu wydarzeń">
-        <EventTimeline client:load events={events} />
+        <EventTimeline events={events} />
       </section>
+      <PhotoSwipeInit client:load />
     </div>
   </main>
 </Layout>

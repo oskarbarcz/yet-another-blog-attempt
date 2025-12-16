@@ -2,7 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 import Meta from "../../components/Meta.astro";
 import ArticleTags from "../../components/articles/ArticleTags.tsx";
-import ZoomableImage from "../../components/shared/ZoomableImage";
+import LightboxImage from "../../components/shared/LightboxImage";
+import PhotoSwipeInit from "../../components/shared/PhotoSwipeInit";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -40,11 +41,12 @@ const { Content } = await entry.render();
       {
         entry.data.coverUrl && (
           <div class="mb-6 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800">
-            <ZoomableImage
+            <LightboxImage
               client:load
               src={entry.data.coverUrl}
               alt={entry.data.title}
-              className="w-full h-64"
+              className="w-full"
+              imgClassName="h-64 w-full object-cover"
             />
           </div>
         )
@@ -92,7 +94,9 @@ const { Content } = await entry.render();
       </div>
     </header>
 
-    <article class="article-content overflow-auto wrap-break-word">
+    <PhotoSwipeInit client:load />
+
+    <article class="article-content pswp-gallery overflow-auto wrap-break-word">
       <Content />
     </article>
   </main>
