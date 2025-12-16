@@ -58,7 +58,11 @@ const Payload = z.object({
 export async function handler(req: Request) {
   const ip = req.headers.get("x-forwarded-for") ?? "unknown";
   // Simple rate limit interface (pseudo)
-  const allowed = await rateLimit.allow({ key: `signup:${ip}`, limit: 20, window: 60_000 });
+  const allowed = await rateLimit.allow({
+    key: `signup:${ip}`,
+    limit: 20,
+    window: 60_000,
+  });
   if (!allowed) return new Response("Too Many Requests", { status: 429 });
 
   const json = await req.json();
@@ -93,16 +97,19 @@ export async function handler(req: Request) {
 ### HTML snippet
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https: data:; object-src 'none'" />
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; img-src https: data:; object-src 'none'"
+/>
 ```
 
 ### Table
 
-| Control            | Purpose                     | Example                         |
-|--------------------|-----------------------------|----------------------------------|
-| Rate limiting      | Throttle abuse               | token+IP sliding window          |
-| Input validation   | Prevent injection            | JSON schema at gateway           |
-| Content Security   | Reduce XSS vectors           | CSP with nonces                  |
+| Control          | Purpose            | Example                 |
+| ---------------- | ------------------ | ----------------------- |
+| Rate limiting    | Throttle abuse     | token+IP sliding window |
+| Input validation | Prevent injection  | JSON schema at gateway  |
+| Content Security | Reduce XSS vectors | CSP with nonces         |
 
 ### Long URL wrapping test
 

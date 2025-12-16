@@ -13,7 +13,7 @@ interface ArticlesListProps {
 export default function ArticlesList({ articles }: ArticlesListProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
-  
+
   const totalPages = Math.ceil(articles.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -21,7 +21,7 @@ export default function ArticlesList({ articles }: ArticlesListProps) {
 
   const onPageChange = (page: number) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -35,7 +35,11 @@ export default function ArticlesList({ articles }: ArticlesListProps) {
           ))}
         </ArticlesGrid>
 
-        <ArticlesPager currentPage={currentPage} totalPages={totalPages} onPageChange={onPageChange} />
+        <ArticlesPager
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={onPageChange}
+        />
       </div>
     </main>
   );

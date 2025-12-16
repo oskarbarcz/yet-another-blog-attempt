@@ -30,7 +30,7 @@ Use a cache strategy document for your team: see the
 [caching playbook](/articles) and the
 external guide on TTLs at
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching.
-You can also use strong emphasis like **must** and *should* when writing rules; sometimes ~~never~~ rarely is appropriate.
+You can also use strong emphasis like **must** and _should_ when writing rules; sometimes ~~never~~ rarely is appropriate.
 
 ### Lists
 
@@ -49,7 +49,7 @@ You can also use strong emphasis like **must** and *should* when writing rules; 
 > Note: Caching doesn’t fix slow origins; it only hides them. Measure and optimize upstream performance.
 
 > Tip:
-> 
+>
 > Use background refresh jobs to repopulate hot keys before they expire.
 
 ### Inline code and a long, unbroken value
@@ -90,13 +90,14 @@ redis-cli --cluster call 10.0.0.10:6379 KEYS 'user:*:profile:v1' \
 A single very long code line to test horizontal overflow:
 
 ```js
-const VERY_LONG = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
+const VERY_LONG =
+  "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
 ```
 
 ### Tables
 
 | Layer        | Typical TTL | Invalidation        |
-|--------------|-------------|---------------------|
+| ------------ | ----------- | ------------------- |
 | CDN          | days        | purge by path/tag   |
 | Proxy (HTML) | seconds     | SWR + background    |
 | App (Redis)  | minutes     | key delete on write |

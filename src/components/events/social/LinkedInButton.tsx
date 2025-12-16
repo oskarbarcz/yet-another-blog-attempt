@@ -6,7 +6,11 @@ interface LinkedInButtonProps {
   label?: string;
 }
 
-export default function LinkedInButton({ href, className = "", label = "LinkedIn" }: LinkedInButtonProps) {
+export default function LinkedInButton({
+  href,
+  className = "",
+  label = "LinkedIn",
+}: LinkedInButtonProps) {
   return (
     <a
       href={href}

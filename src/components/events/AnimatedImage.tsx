@@ -19,7 +19,7 @@ export default function AnimatedImage({ src, alt }: AnimatedImageProps) {
         alt={alt}
         onLoad={() => setLoaded(true)}
         className={`max-h-[80vh] w-auto max-w-full object-contain transition-all duration-300 ease-out ${
-          loaded ? "opacity-100 scale-100" : "opacity-0 scale-[0.99]"
+          loaded ? "scale-100 opacity-100" : "scale-[0.99] opacity-0"
         }`}
       />
     </div>

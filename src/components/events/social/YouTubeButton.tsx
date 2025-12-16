@@ -6,7 +6,11 @@ interface YouTubeButtonProps {
   label?: string;
 }
 
-export default function YouTubeButton({ href, className = "", label = "YouTube" }: YouTubeButtonProps) {
+export default function YouTubeButton({
+  href,
+  className = "",
+  label = "YouTube",
+}: YouTubeButtonProps) {
   return (
     <a
       href={href}

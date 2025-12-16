@@ -17,7 +17,9 @@
 
   --font-family-mono: "Roboto Mono", ui-monospace, monospace;
   --font-family-slab: "Roboto Slab", ui-serif, serif;
-  --font-family-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-family-sans:
+    ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -61,15 +63,28 @@ body.dark {
   margin-bottom: 0.6em;
 }
 
-.prose-article h1 { font-size: 2rem; }
-.prose-article h2 { font-size: 1.5rem; }
-.prose-article h3 { font-size: 1.25rem; }
+.prose-article h1 {
+  font-size: 2rem;
+}
+.prose-article h2 {
+  font-size: 1.5rem;
+}
+.prose-article h3 {
+  font-size: 1.25rem;
+}
 
-.prose-article p { margin: 1em 0; }
+.prose-article p {
+  margin: 1em 0;
+}
 
 .prose-article ul,
-.prose-article ol { padding-left: 1.25rem; margin: 1em 0; }
-.prose-article li { margin: 0.25em 0; }
+.prose-article ol {
+  padding-left: 1.25rem;
+  margin: 1em 0;
+}
+.prose-article li {
+  margin: 0.25em 0;
+}
 
 .prose-article blockquote {
   border-left: 4px solid rgb(229 231 235);
@@ -121,5 +136,11 @@ body.dark .prose-article pre {
   border-radius: 0.5rem;
 }
 
-.prose-article a { color: var(--color-brand-600); text-decoration: underline; text-underline-offset: 2px; }
-body.dark .prose-article a { color: var(--color-brand-400); }
+.prose-article a {
+  color: var(--color-brand-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+body.dark .prose-article a {
+  color: var(--color-brand-400);
+}

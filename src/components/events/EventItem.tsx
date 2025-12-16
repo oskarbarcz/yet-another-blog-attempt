@@ -1,5 +1,10 @@
 import { FaLocationDot, FaUserGroup } from "react-icons/fa6";
-import { Timeline, TimelineContent, TimelineItem, TimelinePoint } from "flowbite-react";
+import {
+  Timeline,
+  TimelineContent,
+  TimelineItem,
+  TimelinePoint,
+} from "flowbite-react";
 import RoleBadge from "./RoleBadge";
 import PhotoGallery from "./PhotoGallery";
 import EventSocialLinks from "./EventSocialLinks";
@@ -46,7 +51,10 @@ export default function EventItem({ event }: EventItemProps) {
             </h3>
             <div className="flex flex-wrap items-center gap-2 text-xs">
               <RoleBadge role={event.role} />
-              <time className="text-gray-500 dark:text-gray-400" dateTime={date.toISOString()}>
+              <time
+                className="text-gray-500 dark:text-gray-400"
+                dateTime={date.toISOString()}
+              >
                 {date.toLocaleDateString(undefined, {
                   year: "numeric",
                   month: "long",
@@ -58,8 +66,13 @@ export default function EventItem({ event }: EventItemProps) {
 
           {/* Location directly below the event name (force new line) */}
           <div className="mt-1 flex w-full items-center gap-1 text-xs text-gray-600 dark:text-gray-400">
-            <FaLocationDot className="h-3.5 w-3.5 text-brand-600 dark:text-brand-400" aria-hidden="true" />
-            <span className="truncate max-w-[18rem] sm:max-w-none">{event.city}</span>
+            <FaLocationDot
+              className="text-brand-600 dark:text-brand-400 h-3.5 w-3.5"
+              aria-hidden="true"
+            />
+            <span className="max-w-[18rem] truncate sm:max-w-none">
+              {event.city}
+            </span>
           </div>
 
           {/* Organizer row */}
@@ -68,25 +81,31 @@ export default function EventItem({ event }: EventItemProps) {
               <img
                 src={event.organizer.logo}
                 alt={`${event.organizer.name} logo`}
-                className="h-4 w-4 rounded-sm object-contain bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700"
+                className="h-4 w-4 rounded-sm bg-white object-contain ring-1 ring-gray-200 dark:bg-gray-800 dark:ring-gray-700"
                 loading="lazy"
                 decoding="async"
               />
             ) : (
-              <FaUserGroup className="h-3.5 w-3.5 text-gray-400" aria-hidden="true" />
+              <FaUserGroup
+                className="h-3.5 w-3.5 text-gray-400"
+                aria-hidden="true"
+              />
             )}
-            <span className="truncate max-w-[18rem] sm:max-w-none">{event.organizer?.name}</span>
+            <span className="max-w-[18rem] truncate sm:max-w-none">
+              {event.organizer?.name}
+            </span>
           </div>
 
           <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
             {event.description}
           </p>
 
-          {hasPhotos && <PhotoGallery photos={event.photos} title={event.title} />}
+          {hasPhotos && (
+            <PhotoGallery photos={event.photos} title={event.title} />
+          )}
 
           <EventSocialLinks links={links} />
         </div>
-
       </TimelineContent>
     </TimelineItem>
   );

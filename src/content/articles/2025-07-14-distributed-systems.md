@@ -72,12 +72,12 @@ function append(entries: LogEntry[], next: LogEntry) {
 
 ### Alignment table
 
-| Model                 | Consistency     | Availability | Notes                  |
-|:----------------------|:----------------|-------------:|:-----------------------|
-| Single leader         | Strong (R/W)    |       medium | failover required      |
-| Leader + followers    | Strong (R/W)    |        high  | read replicas possible |
-| Multi‑leader          | Eventual        |        high  | conflict resolution    |
-| Leaderless (quorum)   | Tunable (R/W)   |        high  | choose R/W quorums     |
+| Model               | Consistency   | Availability | Notes                  |
+| :------------------ | :------------ | -----------: | :--------------------- |
+| Single leader       | Strong (R/W)  |       medium | failover required      |
+| Leader + followers  | Strong (R/W)  |         high | read replicas possible |
+| Multi‑leader        | Eventual      |         high | conflict resolution    |
+| Leaderless (quorum) | Tunable (R/W) |         high | choose R/W quorums     |
 
 ### Horizontal rule
 
