@@ -58,7 +58,7 @@ const resolvedAuthor = authorName ?? AUTHOR_NAME;
 
 <!-- Structured Data -->
 {isHome && (
-  <script type="application/ld+json" set:html={JSON.stringify({
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: SITE_NAME,
@@ -71,7 +71,7 @@ const resolvedAuthor = authorName ?? AUTHOR_NAME;
 )}
 
 {type === 'article' && publishedTime && (
-  <script type="application/ld+json" set:html={JSON.stringify({
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title ?? DEFAULT_SITE_TITLE,
