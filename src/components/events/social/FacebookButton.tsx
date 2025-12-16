@@ -6,7 +6,11 @@ interface FacebookButtonProps {
   label?: string;
 }
 
-export default function FacebookButton({ href, className = "", label = "Facebook" }: FacebookButtonProps) {
+export default function FacebookButton({
+  href,
+  className = "",
+  label = "Facebook",
+}: FacebookButtonProps) {
   return (
     <a
       href={href}

@@ -8,7 +8,12 @@ interface ZoomableImageProps {
   modalTitle?: string;
 }
 
-export default function ZoomableImage({ src, alt = "", className = "", modalTitle }: ZoomableImageProps) {
+export default function ZoomableImage({
+  src,
+  alt = "",
+  className = "",
+  modalTitle,
+}: ZoomableImageProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -19,7 +24,7 @@ export default function ZoomableImage({ src, alt = "", className = "", modalTitl
         className={`group block cursor-zoom-in ${className}`}
         aria-label={alt ? `Otwórz obraz: ${alt}` : "Otwórz obraz"}
       >
-        <img src={src} alt={alt} className="w-full h-auto object-cover" />
+        <img src={src} alt={alt} className="h-auto w-full object-cover" />
       </button>
 
       <Modal
@@ -50,7 +55,11 @@ export default function ZoomableImage({ src, alt = "", className = "", modalTitl
         }}
       >
         <div className="flex items-center justify-center">
-          <img src={src} alt={alt} className="max-h-[85vh] w-auto max-w-[95vw] object-contain" />
+          <img
+            src={src}
+            alt={alt}
+            className="max-h-[85vh] w-auto max-w-[95vw] object-contain"
+          />
         </div>
       </Modal>
     </>

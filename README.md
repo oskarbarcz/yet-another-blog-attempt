@@ -46,3 +46,58 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+---
+
+## 🚢 Deployment: GitHub Pages (Actions)
+
+This project is configured to deploy to GitHub Pages via GitHub Actions.
+
+Repository: `oskarbarcz/yet-another-blog-attempt`
+
+### What’s included
+
+- Workflow: `.github/workflows/deploy.yml` builds the site and deploys to the `github-pages` environment on every push to `main`.
+- Astro config sets `site: "https://blog.barcz.me"` to generate canonical URLs for your future custom domain.
+
+### One-time setup in GitHub UI
+
+1. Push the workflow to the `main` branch (already in this repo once you commit).
+2. In GitHub → Settings → Pages:
+   - Source: “GitHub Actions”.
+   - Ensure Pages is enabled; first deploy will appear after the workflow runs.
+
+### Custom domain (later)
+
+When you’re ready to use `blog.barcz.me`:
+
+1. In your DNS provider, create a CNAME record:
+   - Host: `blog`
+   - Value: `oskarbarcz.github.io.`
+2. In GitHub → Settings → Pages → “Custom domain”: enter `blog.barcz.me` and save.
+3. Optionally add a `public/CNAME` file with the single line:
+   ```
+   blog.barcz.me
+   ```
+   Commit to persist the domain in the repository (prevents accidental resets).
+
+Notes:
+
+- Until the custom domain is active, GitHub Pages will preview under `https://oskarbarcz.github.io/yet-another-blog-attempt/`.
+- Because `astro.config.mjs` uses `site = https://blog.barcz.me`, canonical URLs will already point to your future domain; this is fine during transition.
+
+### Local development
+
+Nothing changes:
+
+```
+npm install
+npm run dev
+npm run build
+```
+
+### Troubleshooting
+
+- If deployment fails with “pages deployment not enabled”, visit Settings → Pages and click “Enable”.
+- If assets 404 on the GitHub Pages preview URL, ensure the workflow completed successfully. With `site` pointing to a custom domain, asset paths are still relative and should work; open devtools network to confirm.
+- DNS changes for the custom domain may take time (TTL). Use `nslookup blog.barcz.me` to verify.

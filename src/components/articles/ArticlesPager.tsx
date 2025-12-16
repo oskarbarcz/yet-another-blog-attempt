@@ -6,11 +6,21 @@ interface ArticlesPagerProps {
   onPageChange: (page: number) => void;
 }
 
-export default function ArticlesPager({ currentPage, totalPages, onPageChange }: ArticlesPagerProps) {
+export default function ArticlesPager({
+  currentPage,
+  totalPages,
+  onPageChange,
+}: ArticlesPagerProps) {
   if (totalPages <= 1) return null;
   return (
     <div className="mt-12 flex justify-center">
-      <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={onPageChange} previousLabel="Poprzednia" nextLabel="Następna" />
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={onPageChange}
+        previousLabel="Poprzednia"
+        nextLabel="Następna"
+      />
     </div>
   );
 }

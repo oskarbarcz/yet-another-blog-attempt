@@ -21,13 +21,19 @@ import { DEFAULT_SITE_DESCRIPTION, DEFAULT_SITE_TITLE, SITE_TITLE_SUFFIX } from 
     <slot name="head" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <ThemeModeScript client:load />
   </head>
-  <body class="min-h-dvh flex flex-col">
+  <body class="flex min-h-dvh flex-col">
     <ThemeInit />
     <Navigation client:load />
-    <div id="page-content" class="flex-1 bg-linear-to-br from-gray-50 via-white to-gray-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+    <div
+      id="page-content"
+      class="flex-1 bg-linear-to-br from-gray-50 via-white to-gray-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950"
+    >
       <slot />
     </div>
     <Footer />
