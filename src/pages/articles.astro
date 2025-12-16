@@ -23,6 +23,10 @@ const articles = allArticles
 
 <Layout>
   <Fragment slot="title">Wszystkie publikacje</Fragment>
-  <Meta slot="head" title="Wszystkie publikacje" description="Lista publikacji: architektura, wydajność, bezpieczeństwo API, React i Astro." />
+  <Meta
+    slot="head"
+    title="Wszystkie publikacje"
+    description="Lista publikacji: architektura, wydajność, bezpieczeństwo API, React i Astro."
+  />
   <ArticlesList articles={articles} client:load />
 </Layout>

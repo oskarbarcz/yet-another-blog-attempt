@@ -2,7 +2,7 @@ export interface Article {
   slug: string;
   title: string;
   excerpt: string;
-  date: string; // ISO string
+  date: string;
   readTime: string;
   tags: string[];
   coverUrl?: string;

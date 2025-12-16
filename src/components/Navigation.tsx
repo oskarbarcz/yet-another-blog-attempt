@@ -9,10 +9,10 @@ import {
 
 export default function Navigation() {
   return (
-    <div className="sticky top-0 z-50 border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-800">
+    <div className="sticky top-0 z-50 border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
       <Navbar
         fluid
-        className="mx-auto max-w-7xl bg-transparent px-4 sm:px-6 lg:px-8"
+        className="mx-auto max-w-7xl bg-transparent px-4 sm:px-6 lg:px-8 dark:bg-gray-900"
       >
         <NavbarBrand
           className="font-family-slab text-brand-600 dark:text-brand-400 text-xl font-bold"
@@ -21,7 +21,7 @@ export default function Navigation() {
           oskar's blog
         </NavbarBrand>
 
-        <div className="flex items-center gap-3 md:order-3">
+        <div className="flex items-center gap-3 md:order-3 md:ml-4 lg:ml-6">
           <DarkThemeToggle />
           <NavbarToggle />
         </div>

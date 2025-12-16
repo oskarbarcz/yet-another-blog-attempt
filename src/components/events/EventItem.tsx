@@ -1,10 +1,5 @@
 import { FaLocationDot, FaUserGroup } from "react-icons/fa6";
-import {
-  Timeline,
-  TimelineContent,
-  TimelineItem,
-  TimelinePoint,
-} from "flowbite-react";
+import { TimelineContent, TimelineItem, TimelinePoint } from "flowbite-react";
 import RoleBadge from "./RoleBadge";
 import PhotoGallery from "./PhotoGallery";
 import EventSocialLinks from "./EventSocialLinks";
@@ -42,7 +37,7 @@ export default function EventItem({ event }: EventItemProps) {
 
   return (
     <TimelineItem>
-      <TimelinePoint className="bg-brand-500 ring-4 ring-white dark:ring-gray-900" />
+      <TimelinePoint className="bg-brand-500" />
       <TimelineContent>
         <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-900/50">
           <div className="flex flex-wrap items-center justify-between gap-3">
