@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type MouseEvent as ReactMouseEvent } from "react";
 import { Modal } from "flowbite-react";
 
 interface ZoomableImageProps {
@@ -13,6 +13,12 @@ export default function ZoomableImage({
   className = "",
 }: ZoomableImageProps) {
   const [open, setOpen] = useState(false);
+
+  const handleBackdropClick = (event: ReactMouseEvent) => {
+    if (event.target === event.currentTarget) {
+      setOpen(false);
+    }
+  };
 
   return (
     <>
@@ -52,7 +58,10 @@ export default function ZoomableImage({
           },
         }}
       >
-        <div className="flex items-center justify-center">
+        <div
+          className="flex items-center justify-center"
+          onClick={handleBackdropClick}
+        >
           <img
             src={src}
             alt={alt}
