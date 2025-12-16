@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Create a GitHub release
         run: "gh release create $(jq -r '.version' package.json) --generate-notes"
-        environment:
+        env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy:
