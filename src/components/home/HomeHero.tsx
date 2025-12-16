@@ -1,10 +1,12 @@
 import { FaArrowRight } from "react-icons/fa6";
+import HeroBlob from "./HeroBlob";
 
 export default function HomeHero() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <div className="max-w-3xl">
+    <section className="relative">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="relative max-w-3xl">
+          <HeroBlob />
           <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
             Witaj na moim blogu — moim cyfrowym ogrodzie
           </h1>

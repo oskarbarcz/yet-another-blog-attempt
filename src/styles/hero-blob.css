@@ -1,0 +1,157 @@
+/* Subtle animated morphing blobs for HomeHero */
+
+/* Container to hold absolutely positioned blobs on the right side */
+.hero-blob-wrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0; /* behind foreground content */
+}
+
+/* Inner variant: constrained to the content container */
+.hero-blob-wrap--inner {
+  position: absolute; /* absolute to the nearest relative parent (.max-w-3xl wrapper) */
+  inset: 0; /* fill the content box */
+}
+
+.hero-blob {
+  position: absolute;
+  right: -8rem;
+  top: 2rem;
+  width: 36rem;
+  height: 36rem;
+  filter: blur(24px);
+  opacity: 0.08; /* barely visible */
+  mix-blend-mode: normal;
+  transform-origin: center;
+  /* Faster morphing per request */
+  animation: blobMorph 7s ease-in-out infinite;
+  will-change: border-radius, transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Smaller size variant to fit inside the hero content container */
+.hero-blob--sm {
+  width: 14rem;
+  height: 14rem;
+  right: -1rem;
+  top: -0.5rem;
+  filter: blur(18px);
+  opacity: 0.06;
+}
+
+/* Medium size variant: slightly bigger than --sm, balanced to the right */
+.hero-blob--md {
+  width: 18rem;
+  height: 18rem;
+  right: 1rem;
+  top: -0.25rem;
+  filter: blur(20px);
+  opacity: 0.065;
+}
+
+/* Individual blobs with brand color variations */
+.hero-blob--a {
+  background: radial-gradient(
+    circle at 30% 30%,
+    var(--color-brand-300),
+    var(--color-brand-400) 60%,
+    transparent 70%
+  );
+  animation-delay: 0s;
+}
+
+.hero-blob--b {
+  right: 4rem;
+  top: 10rem;
+  width: 28rem;
+  height: 28rem;
+  background: radial-gradient(
+    circle at 70% 40%,
+    var(--color-brand-200),
+    var(--color-brand-300) 55%,
+    transparent 75%
+  );
+  animation-delay: 6s;
+}
+
+/* Adjust positions/sizes for small variant */
+.hero-blob--b.hero-blob--sm {
+  right: 2rem;
+  top: 3rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+/* Adjust positions/sizes for medium variant */
+.hero-blob--b.hero-blob--md {
+  right: 3.25rem;
+  top: 2rem;
+  width: 13rem;
+  height: 13rem;
+}
+
+.hero-blob--c {
+  right: -2rem;
+  top: -2rem;
+  width: 22rem;
+  height: 22rem;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--color-brand-400),
+    var(--color-brand-500) 50%,
+    transparent 80%
+  );
+  animation-delay: 12s;
+}
+
+.hero-blob--c.hero-blob--sm {
+  right: 0;
+  top: 7rem;
+  width: 8rem;
+  height: 8rem;
+}
+
+.hero-blob--c.hero-blob--md {
+  right: 0.25rem;
+  top: 6rem;
+  width: 11rem;
+  height: 11rem;
+}
+
+/* Dark mode: reduce brightness and opacity slightly to stay subtle */
+html.dark .hero-blob {
+  opacity: 0.06;
+  filter: blur(28px);
+}
+
+@keyframes blobMorph {
+  0% {
+    border-radius: 43% 57% 60% 40% / 44% 46% 54% 56%;
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    border-radius: 58% 42% 45% 55% / 50% 60% 40% 50%;
+    transform: translate3d(-12px, -6px, 0) rotate(8deg) scale(1.04);
+  }
+  50% {
+    border-radius: 40% 60% 52% 48% / 58% 42% 58% 42%;
+    transform: translate3d(8px, 4px, 0) rotate(-6deg) scale(0.98);
+  }
+  75% {
+    border-radius: 55% 45% 47% 53% / 45% 55% 45% 55%;
+    transform: translate3d(-6px, 10px, 0) rotate(4deg) scale(1.02);
+  }
+  100% {
+    border-radius: 43% 57% 60% 40% / 44% 46% 54% 56%;
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+}
+
+/* Responsive tweaks: hide on very small screens */
+@media (max-width: 640px) {
+  .hero-blob {
+    display: none;
+  }
+}
