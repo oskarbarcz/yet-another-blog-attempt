@@ -33,69 +33,66 @@ const { Content } = await entry.render();
     publishedTime={entry.data.date.toISOString()}
     image={entry.data.coverUrl}
   />
-  <main class="relative">
-    <div
-      class="relative mx-auto max-w-5xl px-4 pt-10 pb-16 sm:px-6 lg:px-8 lg:pt-16 lg:pb-24"
-    >
-      <header class="mb-10">
-        {
-          entry.data.coverUrl && (
-            <div class="mb-6 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800">
-              <ZoomableImage
-                client:load
-                src={entry.data.coverUrl}
-                alt={entry.data.title}
-                className="w-full h-64"
-              />
-            </div>
-          )
-        }
-        <nav class="mb-6">
-          <a
-            href="/articles"
-            class="hover:text-brand-600 dark:hover:text-brand-400 inline-flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-          >
-            <span aria-hidden="true">←</span>
-            Powrót do listy publikacji
-          </a>
-        </nav>
-        <h1
-          class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+  <main class="relative mx-auto max-w-5xl px-4 pt-10 pb-16 sm:px-6 lg:px-8 lg:pt-16 lg:pb-24"
+  >
+    <header class="mb-10">
+      {
+        entry.data.coverUrl && (
+          <div class="mb-6 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800">
+            <ZoomableImage
+              client:load
+              src={entry.data.coverUrl}
+              alt={entry.data.title}
+              className="w-full h-64"
+            />
+          </div>
+        )
+      }
+      <nav class="mb-6">
+        <a
+          href="/articles"
+          class="hover:text-brand-600 dark:hover:text-brand-400 inline-flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400"
         >
-          {entry.data.title}
-        </h1>
-        <div
-          class="mt-3 flex flex-wrap items-center gap-3 text-sm text-gray-600 dark:text-gray-400"
-        >
-          <time datetime={entry.data.date.toISOString()}>
-            {
-              entry.data.date.toLocaleDateString(undefined, {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })
-            }
-          </time>
-          <span aria-hidden="true">•</span>
-          <span>{entry.data.readTime}</span>
+          <span aria-hidden="true">←</span>
+          Powrót do listy publikacji
+        </a>
+      </nav>
+      <h1
+        class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+      >
+        {entry.data.title}
+      </h1>
+      <div
+        class="mt-3 flex flex-wrap items-center gap-3 text-sm text-gray-600 dark:text-gray-400"
+      >
+        <time datetime={entry.data.date.toISOString()}>
           {
-            entry.data.tags?.length ? (
-              <>
-                <span aria-hidden="true">•</span>
-                <ArticleTags
-                  client:load
-                  tags={entry.data.tags}
-                  limit={entry.data.tags.length}
-                />
-              </>
-            ) : null
+            entry.data.date.toLocaleDateString(undefined, {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
           }
-        </div>
-      </header>
+        </time>
+        <span aria-hidden="true">•</span>
+        <span>{entry.data.readTime}</span>
+        {
+          entry.data.tags?.length ? (
+            <>
+              <span aria-hidden="true">•</span>
+              <ArticleTags
+                client:load
+                tags={entry.data.tags}
+                limit={entry.data.tags.length}
+              />
+            </>
+          ) : null
+        }
+      </div>
+    </header>
 
-      <article class="article-content">
-        <Content />
-      </article>
-    </div>
+    <article class="article-content overflow-auto wrap-break-word">
+      <Content />
+    </article>
   </main>
 </Layout>
