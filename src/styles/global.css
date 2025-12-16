@@ -17,6 +17,109 @@
 
   --font-family-mono: "Roboto Mono", ui-monospace, monospace;
   --font-family-slab: "Roboto Slab", ui-serif, serif;
+  --font-family-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Base typography */
+html:where(:not(.dark)) body {
+  color: rgb(17 24 39); /* gray-900 */
+}
+
+body {
+  font-family: var(--font-family-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(249 250 251); /* gray-50 */
+}
+
+body.dark {
+  background-color: rgb(2 6 23); /* gray-950 */
+  color: rgb(243 244 246); /* gray-100 */
+}
+
+/* Long-form article typography */
+.prose-article {
+  max-width: 72ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.0625rem; /* ~17px */
+  line-height: 1.8;
+}
+
+.prose-article h1,
+.prose-article h2,
+.prose-article h3,
+.prose-article h4,
+.prose-article h5,
+.prose-article h6 {
+  font-family: var(--font-family-slab);
+  line-height: 1.25;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+}
+
+.prose-article h1 { font-size: 2rem; }
+.prose-article h2 { font-size: 1.5rem; }
+.prose-article h3 { font-size: 1.25rem; }
+
+.prose-article p { margin: 1em 0; }
+
+.prose-article ul,
+.prose-article ol { padding-left: 1.25rem; margin: 1em 0; }
+.prose-article li { margin: 0.25em 0; }
+
+.prose-article blockquote {
+  border-left: 4px solid rgb(229 231 235);
+  padding-left: 1rem;
+  color: rgb(75 85 99);
+  margin: 1.25em 0;
+}
+
+body.dark .prose-article blockquote {
+  border-left-color: rgb(31 41 55);
+  color: rgb(156 163 175);
+}
+
+.prose-article code {
+  font-family: var(--font-family-mono);
+  font-size: 0.95em;
+  background: rgb(243 244 246);
+  color: rgb(17 24 39);
+  padding: 0.15em 0.35em;
+  border-radius: 0.25rem;
+}
+
+body.dark .prose-article code {
+  background: rgb(17 24 39);
+  color: rgb(229 231 235);
+}
+
+.prose-article pre {
+  font-family: var(--font-family-mono);
+  background: rgb(243 244 246);
+  color: rgb(17 24 39);
+  padding: 1rem;
+  overflow: auto;
+  border-radius: 0.5rem;
+  margin: 1.25em 0;
+}
+
+body.dark .prose-article pre {
+  background: rgb(17 24 39);
+  color: rgb(229 231 235);
+}
+
+.prose-article img,
+.prose-article video,
+.prose-article iframe {
+  display: block;
+  max-width: 100%;
+  margin: 1.25em auto;
+  border-radius: 0.5rem;
+}
+
+.prose-article a { color: var(--color-brand-600); text-decoration: underline; text-underline-offset: 2px; }
+body.dark .prose-article a { color: var(--color-brand-400); }

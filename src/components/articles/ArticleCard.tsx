@@ -15,19 +15,20 @@ export default function ArticleCard({ article }: ArticleCardProps) {
     >
       {article.coverUrl && (
         <div className="relative h-40 w-full overflow-hidden bg-gray-100 dark:bg-gray-800">
-          <img
-            src={article.coverUrl}
-            alt={article.title}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-linear-to-t from-gray-900/50 via-gray-900/0 to-gray-900/0 dark:from-gray-950/70" />
+          <a href={`/articles/${article.slug}`} className="block h-full w-full">
+            <img
+              src={article.coverUrl}
+              alt={article.title}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </a>
         </div>
       )}
 
       <div className="flex flex-1 flex-col p-5 space-y-3">
         <div className="flex-1 space-y-2">
           <h2 className="text-xl font-bold leading-snug tracking-tight text-gray-900 transition-colors group-hover:text-brand-600 dark:text-white dark:group-hover:text-brand-400">
-            {article.title}
+            <a href={`/articles/${article.slug}`}>{article.title}</a>
           </h2>
           <p className="line-clamp-2 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
             {article.excerpt}
@@ -39,7 +40,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
         <div className="flex flex-wrap items-center justify-between gap-3 pt-3 text-xs text-gray-500 dark:text-gray-500 border-t border-gray-200 dark:border-gray-800">
           <ArticleMeta date={article.date} readTime={article.readTime} />
 
-          <Button size="xs" color="gray" pill>
+          <Button size="xs" color="gray" pill as="a" href={`/articles/${article.slug}`}>
             <span className="flex items-center gap-1.5 text-xs">
               Read
               <FaArrowRight className="h-2.5 w-2.5" />
