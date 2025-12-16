@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Check if image version is available to publish
-        run: './.workflows/bin/check_version_is_free "$(jq -r ''.version'' package.json)"'
+        run: './.github/bin/check_version_is_free "$(jq -r ''.version'' package.json)"'
         continue-on-error: true
   code:
     runs-on: ubuntu-latest
