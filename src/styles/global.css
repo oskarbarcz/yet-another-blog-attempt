@@ -2,4 +2,21 @@
 @import "flowbite-react/plugin/tailwindcss";
 @source "../../.flowbite-react/class-list.json";
 
+@theme {
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #40bf7e;
+  --color-brand-500: #40bf7e;
+  --color-brand-600: #40bf7e;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+
+  --font-family-mono: "Roboto Mono", ui-monospace, monospace;
+  --font-family-slab: "Roboto Slab", ui-serif, serif;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));

@@ -2,6 +2,8 @@
 import "./src/styles/global.css";
 import { ThemeModeScript } from "flowbite-react";
 import { ThemeInit } from "../../.flowbite-react/init";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 ---
 
 <!doctype html>
@@ -12,10 +14,15 @@ import { ThemeInit } from "../../.flowbite-react/init";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Flowbite React Template Astro</title>
-    <ThemeModeScript />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
+    <ThemeModeScript client:load />
   </head>
   <body>
     <ThemeInit />
+    <Navigation client:load />
     <slot />
+    <Footer />
   </body>
 </html>
