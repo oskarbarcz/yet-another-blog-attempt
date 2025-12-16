@@ -5,7 +5,7 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -33,11 +33,13 @@ jobs:
         with:
           path: ./dist
 
-  tag:
+  release:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repository
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Release and push git tag
         run: "git tag $(jq -r '.version' package.json) && git push --tags"
       - name: Create a GitHub release
