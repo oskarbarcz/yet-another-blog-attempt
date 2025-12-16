@@ -39,7 +39,7 @@ body {
 
 /* Dark mode base (class is applied on html element) */
 html.dark body {
-  background-color: rgb(2 6 23); /* gray-950 */
+  background-color: rgb(17 24 39); /* gray-900 */
   color: rgb(243 244 246); /* gray-100 */
 }
 
