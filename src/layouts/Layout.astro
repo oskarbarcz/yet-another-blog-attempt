@@ -4,6 +4,7 @@ import { ThemeModeScript } from "flowbite-react";
 import { ThemeInit } from "../../.flowbite-react/init";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import { DEFAULT_SITE_DESCRIPTION, DEFAULT_SITE_TITLE, SITE_TITLE_SUFFIX } from "../constants";
 ---
 
 <!doctype html>
@@ -13,7 +14,11 @@ import Footer from "../components/Footer";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Flowbite React Template Astro</title>
+    <title>
+      {(Astro.slots.has('title') ? await Astro.slots.render('title') : DEFAULT_SITE_TITLE) + SITE_TITLE_SUFFIX}
+    </title>
+
+    <slot name="head" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

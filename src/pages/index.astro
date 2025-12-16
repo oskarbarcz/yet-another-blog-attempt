@@ -1,11 +1,44 @@
 ---
-import Welcome from "../components/welcome";
 import Layout from "../layouts/Layout.astro";
+import Meta from "../components/Meta.astro";
+import { getCollection } from "astro:content";
+import HomeHero from "../components/home/HomeHero";
+import HomeLatestArticles from "../components/home/HomeLatestArticles";
+import HomeLatestEvents from "../components/home/HomeLatestEvents";
+import { HOMEPAGE_LATEST_COUNT } from "../constants";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const allArticles = await getCollection("articles");
+const latestArticles = allArticles
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, HOMEPAGE_LATEST_COUNT)
+  .map((article) => ({
+    slug: article.slug,
+    title: article.data.title,
+    excerpt: article.data.excerpt,
+    date: article.data.date.toISOString(),
+    readTime: article.data.readTime,
+    tags: article.data.tags,
+    coverUrl: article.data.coverUrl,
+  }));
+
+const allEvents = await getCollection("events");
+const latestEvents = allEvents
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, HOMEPAGE_LATEST_COUNT)
+  .map((e) => ({
+    title: e.data.title,
+    role: e.data.role,
+    date: e.data.date.toISOString(),
+    city: e.data.city,
+  }));
 ---
 
 <Layout>
-  <Welcome client:load />
+  <Fragment slot="title">Mój cyfrowy ogród</Fragment>
+  <Meta slot="head" title="Mój cyfrowy ogród" description="Mój cyfrowy ogród: publikacje o architekturze, wydajności, bezpieczeństwie API oraz React/Astro." />
+  <main>
+    <HomeHero />
+    <HomeLatestArticles articles={latestArticles} />
+    <HomeLatestEvents events={latestEvents} />
+  </main>
 </Layout>
