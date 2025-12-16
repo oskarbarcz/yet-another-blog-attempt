@@ -21,7 +21,7 @@ export default function Navigation() {
           oskar's blog
         </NavbarBrand>
 
-        <div className="flex items-center gap-3 md:order-3">
+        <div className="flex items-center gap-3 md:order-3 md:ml-4 lg:ml-6">
           <DarkThemeToggle />
           <NavbarToggle />
         </div>
