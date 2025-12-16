@@ -46,7 +46,7 @@ export default function PhotoGallery({ photos = [], title, initialIndex = 0 }: P
               setActiveIndex(i);
               setOpen(true);
             }}
-            aria-label={`Open photo ${i + 1}`}
+            aria-label={`Otwórz zdjęcie ${i + 1}`}
           >
             <img
               src={src}
@@ -82,7 +82,7 @@ export default function PhotoGallery({ photos = [], title, initialIndex = 0 }: P
         <div className="relative h-[65vh] select-none">
           <button
             type="button"
-            aria-label="Previous photo"
+            aria-label="Poprzednie zdjęcie"
             onClick={() => setActiveIndex((i) => (i - 1 + items.length) % items.length)}
             className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-700 shadow hover:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 dark:bg-gray-900/70 dark:text-gray-200"
           >
@@ -91,7 +91,7 @@ export default function PhotoGallery({ photos = [], title, initialIndex = 0 }: P
 
           <button
             type="button"
-            aria-label="Next photo"
+            aria-label="Następne zdjęcie"
             onClick={() => setActiveIndex((i) => (i + 1) % items.length)}
             className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/80 p-2 text-gray-700 shadow hover:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 dark:bg-gray-900/70 dark:text-gray-200"
           >

@@ -6,7 +6,7 @@ interface ArticleButtonProps {
   label?: string;
 }
 
-export default function ArticleButton({ href, className = "", label = "Related article" }: ArticleButtonProps) {
+export default function ArticleButton({ href, className = "", label = "Powiązany artykuł" }: ArticleButtonProps) {
   return (
     <a
       href={href}

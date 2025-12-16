@@ -17,7 +17,7 @@ export default function ZoomableImage({ src, alt = "", className = "", modalTitl
         type="button"
         onClick={() => setOpen(true)}
         className={`group block cursor-zoom-in ${className}`}
-        aria-label={alt ? `Open image: ${alt}` : "Open image"}
+        aria-label={alt ? `Otwórz obraz: ${alt}` : "Otwórz obraz"}
       >
         <img src={src} alt={alt} className="w-full h-auto object-cover" />
       </button>
