@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@astrojs/prefetch": "^0.4.1",
     "@astrojs/react": "^4.3.0",
     "@tailwindcss/vite": "^4.1.11",
     "@types/react": "^19.1.8",

@@ -1,5 +1,5 @@
 ---
-import "./src/styles/global.css";
+import "../styles/global.css";
 import { ThemeModeScript } from "flowbite-react";
 import { ThemeInit } from "../../.flowbite-react/init";
 import Navigation from "../components/Navigation";
@@ -19,10 +19,12 @@ import Footer from "../components/Footer";
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
     <ThemeModeScript client:load />
   </head>
-  <body>
+  <body class="min-h-dvh flex flex-col">
     <ThemeInit />
     <Navigation client:load />
-    <slot />
+    <div class="flex-1 bg-linear-to-br from-gray-50 via-white to-gray-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>
