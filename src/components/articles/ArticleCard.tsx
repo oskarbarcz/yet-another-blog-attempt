@@ -42,7 +42,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
 
           <Button size="xs" color="gray" pill as="a" href={`/articles/${article.slug}`}>
             <span className="flex items-center gap-1.5 text-xs">
-              Read
+              Przeczytaj
               <FaArrowRight className="h-2.5 w-2.5" />
             </span>
           </Button>

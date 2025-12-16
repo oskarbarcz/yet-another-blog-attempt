@@ -28,8 +28,8 @@ export default function Navigation() {
 
         <NavbarCollapse className="md:order-2 md:ml-auto">
           <NavbarLink href="/">Home</NavbarLink>
-          <NavbarLink href="/updates">Updates</NavbarLink>
-          <NavbarLink href="/articles">Publications</NavbarLink>
+          <NavbarLink href="/articles">Publikacje</NavbarLink>
+          <NavbarLink href="/events">Events</NavbarLink>
         </NavbarCollapse>
       </Navbar>
     </div>
