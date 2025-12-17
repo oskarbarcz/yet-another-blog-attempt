@@ -17,16 +17,23 @@ const events = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(), // event name
-    role: z.enum(["guest", "speaker", "panelist"]),
+    role: z.enum(["guest", "speaker", "panelist", "participant"]),
     date: z.date(),
     city: z.string(),
     description: z.string(),
     organizer: z.object({
       name: z.string(),
-      // Logo may be null or omitted entirely
       logo: z.string().url().nullable().optional(),
     }),
-    photos: z.array(z.string().url()).optional().default([]),
+    photos: z
+      .array(
+        z.union([
+          z.string().url(),
+          z.string().regex(/^(?:\/|\.\/|\.\.\/|[A-Za-z0-9_\-./]+)$/),
+        ]),
+      )
+      .optional()
+      .default([]),
     links: z
       .object({
         // Allow internal article links (e.g., /articles/my-post) or full URLs

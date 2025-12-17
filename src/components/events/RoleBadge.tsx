@@ -1,5 +1,5 @@
 interface RoleBadgeProps {
-  role: "guest" | "speaker" | "panelist";
+  role: "guest" | "speaker" | "panelist" | "participant";
 }
 
 export default function RoleBadge({ role }: RoleBadgeProps) {
@@ -10,6 +10,11 @@ export default function RoleBadge({ role }: RoleBadgeProps) {
     guest: {
       label: "Gość",
       classes: "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300",
+    },
+    participant: {
+      label: "Uczestnik",
+      classes:
+        "bg-brand-50 text-brand-700 dark:bg-brand-400/10 dark:text-brand-400",
     },
     speaker: {
       label: "Prelegent",

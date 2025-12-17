@@ -14,7 +14,7 @@ export interface EventLinks {
 
 export interface EventItemData {
   title: string;
-  role: "guest" | "speaker" | "panelist";
+  role: "guest" | "speaker" | "panelist" | "participant";
   date: string; // ISO
   city: string;
   description: string;
@@ -50,7 +50,7 @@ export default function EventItem({ event }: EventItemProps) {
                 className="text-gray-500 dark:text-gray-400"
                 dateTime={date.toISOString()}
               >
-                {date.toLocaleDateString(undefined, {
+                {date.toLocaleDateString("pl-PL", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
