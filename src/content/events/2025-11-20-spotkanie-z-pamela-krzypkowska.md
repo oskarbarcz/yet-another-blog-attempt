@@ -5,7 +5,7 @@ date: 2025-11-20
 city: "Warszawa, Polska"
 description: >
   Uczestniczyłem w spotkaniu z Pamelą Krzypkowską, Dyrektorką Departamentu Badań i Innowacji w Ministerstwie Cyfryzacji,
-  zorganizowanym przez Fundacja Zryw! Rozmawialiśmy o kierunkach polityki cyfrowej w Polsce oraz o tym, jak sztuczna
+  zorganizowanym przez Fundację Zryw! Rozmawialiśmy o kierunkach polityki cyfrowej w Polsce oraz o tym, jak sztuczna
   inteligencja może wspierać rozwój biznesu i administracji publicznej.
 organizer:
   logo: "https://fundacjazryw.pl/assets/favicon-fo13e1yl.svg"

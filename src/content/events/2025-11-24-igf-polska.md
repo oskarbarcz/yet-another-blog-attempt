@@ -6,7 +6,7 @@ city: "Warszawa, Polska"
 description: >
   Podczas IGF Polska 2025 organizowanym przez Ministerstwo Cyfryzacji / NASK, byłem członkiem panelu pt. "Programowanie
   bez programistów: Jak zmienia się rynek IT". Opowiadałem perspektywę Fundacji Generacja Innowacja na rozwój AI.
-  Pracujemy z młodzieżą która wchodzi na rynek IT: doskonale widzimy jak radzą sobie z AI, i to naszym zadaniem jest
+  Pracujemy z młodzieżą, która wchodzi na rynek IT: doskonale widzimy jak radzą sobie z AI, i to naszym zadaniem jest
   przygotować ich na rynek IT przyszłości: to bardzo ważne, by ta perspektywa była usłyszana.
 organizer:
   logo: "https://www.gov.pl/img/icons/favicon-96x96.png"

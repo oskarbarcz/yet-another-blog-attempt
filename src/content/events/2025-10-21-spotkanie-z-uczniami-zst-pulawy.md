@@ -16,5 +16,5 @@ photos:
   - "/photos/events/2025-10-21-spotkanie-z-uczniami-zst-pulawy/0.jpeg"
 links:
   facebook: "https://www.facebook.com/oskarbarcz/posts/3280178975469412"
-  linkedin: "https://www.linkedin.com/posts/giorgpl_generacjainnowacja-innowacje-cyfryzacja-activity-7397705236385001472-PxPb"
+  linkedin: "https://www.linkedin.com/posts/oskarbarcz_internship-school-education-activity-7386738495073120256-S0oy"
 ---
