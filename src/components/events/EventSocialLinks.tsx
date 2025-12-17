@@ -19,11 +19,11 @@ export default function EventSocialLinks({ links }: EventSocialLinksProps) {
 
   return (
     <div className="mt-3 flex flex-wrap items-center gap-2">
-      {links.article && <ArticleButton href={links.article} />}
-      {links.youtube && <YouTubeButton href={links.youtube} />}
-      {links.linkedin && <LinkedInButton href={links.linkedin} />}
       {links.facebook && <FacebookButton href={links.facebook} />}
+      {links.linkedin && <LinkedInButton href={links.linkedin} />}
+      {links.youtube && <YouTubeButton href={links.youtube} />}
       {links.other && <ExternalLinkButton href={links.other} />}
+      {links.article && <ArticleButton href={links.article} />}
     </div>
   );
 }

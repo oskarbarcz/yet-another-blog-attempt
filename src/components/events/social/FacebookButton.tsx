@@ -16,7 +16,7 @@ export default function FacebookButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 hover:bg-blue-100 dark:bg-blue-400/10 dark:text-blue-400 ${className}`}
+      className={`inline-flex items-center gap-2 rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 hover:bg-blue-100 dark:bg-blue-400/10 dark:text-blue-400 ${className}`}
       aria-label="Otwórz link Facebook"
     >
       <FaFacebook className="h-3.5 w-3.5" /> {label}
