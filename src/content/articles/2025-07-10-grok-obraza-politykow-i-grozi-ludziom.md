@@ -1,5 +1,5 @@
 ---
-title: "Grok obraża i grozi ludziom"
+title: "Grok obraża polityków i grozi ludziom"
 excerpt: |
   Problem z AI na platformie X nie zaczyna się od tego, że Grok stał się agresywny i kontrowersyjny - sedno tego
   złożonego problemu leży zupełnie gdzie indziej.
@@ -34,7 +34,7 @@ dezinformację i gloryfikuje zbrodniarzy? Jasne, właściciel X formalnie istnie
 to jak strzelanie z procy w pancernik. Pozwy o naruszenia dóbr osobistych są skrajnie nieskuteczne, przewlekłe, a
 skutki, jeśli w ogóle są, to są czysto symboliczne, szczególnie w porównaniu do zysku korporacji.
 
-![You can stop the trolley anytime ](/photos/article/2025-07-10-grok-obraza-i-grozi-ludziom/0.jpg)
+![You can stop the trolley anytime ](/photos/article/2025-07-10-grok-obraza-politykow-i-grozi-ludziom/0.jpg)
 
 Co nam umyka - Grok nie opiera się tylko na faktach: on uczy się przede wszystkim z reakcji użytkowników platformy,
 czyli z ich opinii, teorii i emocji. Często powtarza rzeczy nieprawdziwe, które po prostu zebrały lajki. A my? Coraz
