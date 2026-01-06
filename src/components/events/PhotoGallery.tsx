@@ -14,7 +14,7 @@ export default function PhotoGallery({
 
   return (
     <div className="pswp-gallery mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
-      {items.slice(0, 3).map((src, i) => (
+      {items.map((src, i) => (
         <img
           key={i}
           src={src}

@@ -1,6 +1,6 @@
 ---
 title: "Spotkanie z uczniami w ZST Puławy"
-role: speaker
+role: organizer
 date: 2025-10-21
 city: "Puławy, Polska"
 description: >

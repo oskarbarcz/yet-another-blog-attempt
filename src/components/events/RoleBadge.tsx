@@ -1,5 +1,5 @@
 interface RoleBadgeProps {
-  role: "guest" | "speaker" | "panelist" | "participant";
+  role: "guest" | "speaker" | "panelist" | "participant" | "organizer";
 }
 
 export default function RoleBadge({ role }: RoleBadgeProps) {
@@ -25,6 +25,11 @@ export default function RoleBadge({ role }: RoleBadgeProps) {
       label: "Panelista",
       classes:
         "bg-indigo-50 text-indigo-700 dark:bg-indigo-400/10 dark:text-indigo-400",
+    },
+    organizer: {
+      label: "Organizator",
+      classes:
+        "bg-red-50 text-red-700 dark:bg-indigo-400/10 dark:text-indigo-400",
     },
   };
   const cfg = map[role];
