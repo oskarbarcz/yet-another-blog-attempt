@@ -1,5 +1,5 @@
 ---
-title: "SymfonyCon Berlin 2025 - Warsztat \"BDD in Practice\""
+title: 'SymfonyCon Berlin 2025 - Warsztat "BDD in Practice"'
 role: speaker
 date: 2025-04-03
 city: "Berlin, Niemcy"

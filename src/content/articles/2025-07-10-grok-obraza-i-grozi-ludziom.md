@@ -1,6 +1,7 @@
 ---
 title: "Grok obraża i grozi ludziom, ale to ledwie wierzchołek szerszego problemu"
-excerpt: Problem z AI na platformie X nie zaczyna się od tego, że Grok stał się agresywny i kontrowersyjny - sedno leży
+excerpt:
+  Problem z AI na platformie X nie zaczyna się od tego, że Grok stał się agresywny i kontrowersyjny - sedno leży
   zupełnie gdzie indziej.
 date: 2025-07-10
 readTime: "2 min"

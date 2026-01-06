@@ -1,5 +1,5 @@
 ---
-title: "Warszawskie Dni Informatyki - Prezentacja \"Jak zbudowaliśmy myPolitics?\""
+title: 'Warszawskie Dni Informatyki - Prezentacja "Jak zbudowaliśmy myPolitics?"'
 role: speaker
 date: 2025-04-04
 city: "Warszawa, Polska"

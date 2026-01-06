@@ -1,5 +1,5 @@
 ---
-title: "Konferencja Innowacje i Technologie Przyszłości - prezentacja \"Jak zbudowaliśmy myPolitics\""
+title: 'Konferencja Innowacje i Technologie Przyszłości - prezentacja "Jak zbudowaliśmy myPolitics"'
 role: speaker
 date: 2025-04-01
 city: "Kędzierzyn-Koźle, Polska"
