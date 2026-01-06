@@ -99,13 +99,12 @@ Osoba prowadząca rozmowę nie jest obiektywnym obserwatorem. Jej osąd jest zak
 i błędów poznawczych. Zrozumienie ich jest kluczowe dla poprawy jakości rekrutacji.
 
 | Błąd poznawczy                                                             | Przejaw w rekrutacji technicznej                                                                                                                                                                                                                      |
-|----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Błąd potwierdzenia (Confirmation Bias)                                     | Rekruter widzi w CV nazwę prestiżowej firmy i podświadomie interpretuje niejednoznaczne odpowiedzi kandydata na jego korzyść, szukając potwierdzenia pierwotnego, pozytywnego wrażenia.                                                               |
 | Błąd podobieństwa (Similarity-Attraction Bias)                             | Faworyzowanie kandydata, który używa tego samego niszowego języka programowania lub ma podobne hobby. Rekruter myli poczucie komfortu i znajomości z faktycznymi kompetencjami.                                                                       |
 | Efekt aureoli / Golema (Halo/Horn Effect)                                  | Kandydat błyskotliwie rozwiązuje pierwsze zadanie (aureola), więc rekruter ignoruje jego późniejsze problemy. Odwrotnie, drobny błąd składniowy na początku (golem) sprawia, że rekruter dyskredytuje jego późniejsze, trafne uwagi architektoniczne. |
 | Błąd stereotypu (Stereotyping Bias)                                        | Zakładanie, że kandydat po bootcampie jest mniej zdolny niż absolwent informatyki, lub że starszy programista nie jest na bieżąco z nowymi technologiami.                                                                                             |
 | Błąd nadmiernej pewności siebie / intuicji (Overconfidence/Intuition Bias) | Rekruter wierzy, że jest w stanie „po prostu wyczuć”, czy programista jest dobry, na podstawie luźnej rozmowy, odrzucając potrzebę ustrukturyzowanych, obiektywnych dowodów.                                                                          |
-
 
 Sam format rozmowy kwalifikacyjnej jest źródłem intensywnego stresu, który aktywnie obniża wydajność kandydata.
 Wspomniane już badanie NC State i Microsoftu dostarcza twardych danych, dowodząc, że publiczna obserwacja podczas
@@ -129,6 +128,7 @@ jak dynamika psychologiczna rozmowy nie tylko obserwuje wydajność, ale aktywni
 potencjalnie dobrego kandydata w „odrzuconego”.
 
 ## Analiza kanonu: dekonstrukcja standardowych metod rekrutacyjnych
+
 Aby zrozumieć, dlaczego rekrutacja zawodzi, należy systematycznie przeanalizować najpopularniejsze metody weryfikacji
 technicznej. Każda z nich, mimo dobrych intencji, opiera się na wadliwym wskaźniku zastępczym (proxy), który nie mierzy
 rzeczywistych umiejętności potrzebnych na danym stanowisku.
@@ -269,12 +269,11 @@ Poniższa tabela przedstawia propozycję nowoczesnego panelu metryk, który rów
 długoterminową wartością.
 
 | Stara metryka                                                  | Nowoczesna metryka                               | Uzasadnienie                                                                                                                                                                                                                                    |
-|----------------------------------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Czas do zatrudnienia** <br> _(Time to Fill)_                 | **Jakość zatrudnienia** <br> _(Quality of Hire)_ | Mierzy długoterminową wartość i wydajność nowego pracownika, co jest ostatecznym celem rekrutacji. Może być obliczana na podstawie ocen okresowych, satysfakcji menedżera i wskaźników retencji.                                                |
 | **Koszt zatrudnienia** <br> _(Cost per Hire)_                  | **Koszt wakatu** <br> _(Cost of Vacancy)_        | Zmienia postrzeganie kosztu z wydatku na inwestycję. Koszt złego zatrudnienia lub długo nieobsadzonego stanowiska (utracona produktywność, wypalenie zespołu) jest często znacznie wyższy niż koszt bardziej dokładnego procesu rekrutacyjnego. |
 | **Liczba rozmów na zatrudnienie** <br> _(Interviews per Hire)_ | **Candidate Net Promoter Score** (NPS)           | Mierzy doświadczenie kandydata. Pozytywne doświadczenie wzmacnia markę pracodawcy i bazę talentów, nawet w przypadku odrzuconych kandydatów. Negatywne – szkodzi jej.                                                                           |
 | Liczba aplikacji                                               | Wskaźnik przejścia według danych demograficznych | Kluczowa metryka do diagnozowania uprzedzeń. Jeśli określone grupy demograficzne są konsekwentnie odrzucane na konkretnym etapie, sygnalizuje to potencjalną wadę lub błąd poznawczy w tym etapie procesu, co wymaga dalszego zbadania.         |
-
 
 Metryki, które firma wybiera do śledzenia w procesie rekrutacji, nie są neutralne; są bezpośrednim odzwierciedleniem
 tego, co organizacja naprawdę ceni. Firma, która śledzi wyłącznie czas i koszt zatrudnienia, niejawnie ceni szybkość i
@@ -329,7 +328,6 @@ następujących źródeł:
 >
 > https://www.reddit.com/r/cscareerquestions/comments/qlgh8x/unpopular_opinion_software_engineers_are_terrible/
 
-
 > Why Are Tech Interviews at FAANG Companies So Difficult?
 >
 > https://interviewkickstart.com/blogs/articles/why-are-tech-interviews-at-faang-companies-so-difficult
@@ -357,7 +355,6 @@ następujących źródeł:
 > Prepare for and ace a pair programming interview
 >
 > https://www.offerzen.com/guides/developer-job-search/interviewing-as-a-developer/preparing-for-technical-interviews-as-a-developer/preparing-for-pair-programming-interviews
-
 
 > Reviewing code in interviews (2023)
 >
