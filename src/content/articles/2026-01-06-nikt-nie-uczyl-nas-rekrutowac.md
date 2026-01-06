@@ -3,7 +3,7 @@ title: "Nikt nie uczył nas rekrutować"
 excerpt: |
   Współczesna rekrutacja w IT zbyt często przypomina egzamin, a nie rozmowę o pracę.
   Czas to zmienić, zanim stracimy kolejne talenty odrzucając je za niespełnienie korpo-standardów.
-date: 2026-06-01
+date: 2026-01-06
 readTime: "11 min"
 tags:
   - recruitment
