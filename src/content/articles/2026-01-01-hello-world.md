@@ -1,5 +1,5 @@
 ---
-title: "Hello, world"
+title: "hello, world"
 excerpt: |
   Witaj na moim blogu, miejscu na refleksje o technologii, człowieku i tym, jak jedno zmienia drugie.
 date: 2026-01-01
@@ -44,7 +44,6 @@ krótkim czasie, a potem przez miesiąc będzie cisza - i to jest dla mnie jedyn
 mnie być przestrzenią do myślenia, a nie kolejnym obowiązkiem na liście zadań. W świecie, w którym każda kolejna
 aplikacja próbuje zmusić mnie do „ciągłości”, ja pozwalam sobie na oddech.
 
-
 ## Tematyka
 
 Najczęściej – o technologii. Rzadziej o niej samej, ponieważ uważam że dużo mądrzejsze ode mnie osoby napisały mnóstwo
@@ -77,7 +76,8 @@ się zabrać za tworzenie tekstu. Finalny stack to **React**, **Astro** i kompon
 statyczny. Jako hosting wykorzystuję **GitHub Pages**, tutaj priorytet to po prostu cena: mam awersję do rozwiązań
 subskrypcyjnych.
 
-Ten blog jest prosty, ale w pełni mój — i o to właśnie chodziło.
+Ten blog jest prosty, ale w pełni mój — i o to właśnie chodziło. Jego kod jest publicznie dostępny na GitHub, i możecie
+go zobaczyć [**o tutaj**](https://github.com/oskarbarcz/yet-another-blog-attempt).
 
 **Dzięki, że tu zajrzałeś.** Jeśli coś z tego, co napisałem, zostanie z Tobą, choć na chwilę — to już wystarczający
 powód, żeby pisać dalej. Do zobaczenia w kolejnych artykułach!

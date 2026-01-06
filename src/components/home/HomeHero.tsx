@@ -13,9 +13,10 @@ export default function HomeHero() {
             moim cyfrowym ogrodzie
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600 dark:text-gray-400">
-            Zawodowo jestem lideren zespołów w obszarze IT i architektem oprogramowania, który z pasją łączy świat
-            komercyjnych innowacji z technologią w służbie społeczeństwu. Na tym blogu zamierzam opisywać swoje
-            przemyślenia oraz publikować dłuższe treści specjalistyczne.
+            Zawodowo jestem lideren zespołów w obszarze IT i architektem
+            oprogramowania, który z pasją łączy świat komercyjnych innowacji z
+            technologią w służbie społeczeństwu. Na tym blogu zamierzam opisywać
+            swoje przemyślenia oraz publikować dłuższe treści specjalistyczne.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
