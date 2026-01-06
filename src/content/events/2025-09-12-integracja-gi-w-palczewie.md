@@ -8,7 +8,6 @@ description:
   najambitniejszy projekt wyjazdowy jaki miałem okazję koordynować! Zorganizowaliśmy czas spędzony na nauce, poznaniu
   siebie, szukaniu potencjałów a także (i przede wszystkim!) - świetnie się bawiliśmy! Wieczory przy ogniskach, spływ
   kajakowy - to był wspaniały czas!
-
 organizer:
   logo: "https://framerusercontent.com/images/taAVUwVMAyawNKRVWt5R6xww.png"
   name: "Generacja Innowacja"

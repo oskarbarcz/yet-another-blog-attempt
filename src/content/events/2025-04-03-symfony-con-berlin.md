@@ -15,4 +15,5 @@ photos:
   - "/photos/events/2025-04-03-symfony-con-berlin/0.jpg"
 links:
   linkedin: "https://www.linkedin.com/posts/oskarbarcz_symfonylive-berlin-symfonyliveberlin2025-activity-7313870313224572929-nmI-"
+  other: "https://live.symfony.com/2025-amsterdam-con/"
 ---

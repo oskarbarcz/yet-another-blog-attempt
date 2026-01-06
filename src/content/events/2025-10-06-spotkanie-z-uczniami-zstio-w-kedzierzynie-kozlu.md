@@ -1,6 +1,6 @@
 ---
 title: "Spotkanie z uczniami w ZSTiO w Kędzierzynie-Koźlu"
-role: speaker
+role: organizer
 date: 2025-10-06
 city: "Kędzierzyn-Koźle, Polska"
 description: >
