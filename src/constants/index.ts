@@ -3,7 +3,7 @@ export const DEFAULT_SITE_TITLE = "Mój cyfrowy ogród";
 export const SITE_TITLE_SUFFIX = " | oskar's blog";
 
 export const DEFAULT_SITE_DESCRIPTION =
-  "Zawodowo jestem lideren zespołów w obszarze IT i architektem oprogramowania, który z pasją łączy świat komercyjnych innowacji z technologią w służbie społeczeństwu. Na tym blogu zamierzam opisywać swoje przemyślenia oraz publikować dłuższe treści specjalistyczne.";
+  "Zawodowo jestem liderem zespołów w obszarze IT i architektem oprogramowania, który z pasją łączy świat komercyjnych innowacji z technologią w służbie społeczeństwu. Na tym blogu zamierzam opisywać swoje przemyślenia oraz publikować dłuższe treści specjalistyczne.";
 
 export const HOMEPAGE_LATEST_COUNT = 3;
 

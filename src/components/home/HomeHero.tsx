@@ -13,7 +13,7 @@ export default function HomeHero() {
             moim cyfrowym ogrodzie
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600 dark:text-gray-400">
-            Zawodowo jestem lideren zespołów w obszarze IT i architektem
+            Zawodowo jestem liderem zespołów w obszarze IT i architektem
             oprogramowania, który z pasją łączy świat komercyjnych innowacji z
             technologią w służbie społeczeństwu. Na tym blogu zamierzam opisywać
             swoje przemyślenia oraz publikować dłuższe treści specjalistyczne.
@@ -30,7 +30,7 @@ export default function HomeHero() {
               href="/events"
               className="hover:text-brand-600 hover:border-brand-300 dark:hover:text-brand-400 inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 dark:border-gray-700 dark:bg-gray-900/50 dark:text-gray-300"
             >
-              Zobacz wydarzenia w których brałem udział
+              Zobacz wydarzenia, w których brałem udział
               <FaArrowRight className="h-4 w-4" />
             </a>
           </div>
