@@ -51,7 +51,7 @@ One doskonale potrafią pisać o niczym lub opisywać funkcje Photoshopa, które
 językowy. **Nie chcę dokładać swojej cegiełki do tego, nie chcę w tym uczestniczyć.**
 
 **Obiecuję więc na tym blogu ani razu nie użyć bezpośrednio modelu językowego do pisania tekstu.** Jeżeli nie czuję, że
-warto  poświęcić trochę energii na to, by coś napisać, szaleństwem byłoby oczekiwać, że ktoś będzie chciał to
+warto poświęcić trochę energii na to, by coś napisać, szaleństwem byłoby oczekiwać, że ktoś będzie chciał to
 przeczytać! Uważam, że te teksty mogą być wartościowe tylko wtedy gdy nie da się ich streścić jedynie do podpunktów,
 jedynie do _prompta_. **Będę korzystać z wybranych narzędzi AI:** po to, żeby szybciej dotrzeć do informacji,
 przeanalizować dane, znaleźć ciekawe źródła. Prawdziwe pisanie jednak to dla mnie proces czysto ludzki i takim zamierzam
