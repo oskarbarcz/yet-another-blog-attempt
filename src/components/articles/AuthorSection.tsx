@@ -3,10 +3,17 @@ import { FaLinkedin } from "react-icons/fa6";
 
 export default function AuthorSection() {
   return (
-    <div className="mx-auto mt-16 max-w-[72ch] border-t border-gray-200 dark:border-gray-800">
-      <div className="group flex flex-col items-center gap-6 py-10 text-center sm:flex-row sm:text-left">
+    <div className="group mx-auto mt-16 max-w-[72ch]">
+      {/* Fancy Divider */}
+      <div className="relative mb-8 flex items-center">
+        <div className="h-px grow bg-linear-to-r from-transparent via-gray-200 to-transparent dark:via-gray-800" />
+        <div className="bg-brand-500/40 ring-brand-500/10 mx-4 h-1.5 w-1.5 rounded-full ring-4" />
+        <div className="h-px grow bg-linear-to-r from-transparent via-gray-200 to-transparent dark:via-gray-800" />
+      </div>
+
+      <div className="flex flex-col items-center gap-6 py-10 text-center sm:flex-row sm:text-left">
         <div className="relative shrink-0">
-          <div className="bg-brand-100 absolute inset-0 rotate-6 rounded-2xl transition-transform group-hover:rotate-12 dark:bg-brand-400/20" />
+          <div className="bg-brand-100 dark:bg-brand-400/20 absolute inset-0 rotate-6 rounded-2xl transition-transform group-hover:rotate-12" />
           <img
             src={AUTHOR_PHOTO}
             alt={AUTHOR_NAME}
@@ -23,7 +30,7 @@ export default function AuthorSection() {
           <div className="mt-4 flex justify-center sm:justify-start">
             <a
               href="https://linkedin.com/in/oskarbarcz"
-              className="bg-brand-600 hover:bg-brand-700 focus:ring-brand-500 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors focus:ring-2 focus:outline-none"
+              className="bg-brand-50 text-brand-600 hover:bg-brand-100 focus:ring-brand-500 dark:bg-brand-400/10 dark:text-brand-400 dark:hover:bg-brand-400/20 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors focus:ring-2 focus:outline-none"
               target="_blank"
               rel="noopener noreferrer"
             >
