@@ -11,7 +11,7 @@ export default function ArticleMeta({ date, readTime }: ArticleMetaProps) {
       <div className="flex items-center gap-1.5">
         <FaCalendarDays className="h-3 w-3 text-gray-400 dark:text-gray-600" />
         <time>
-          {new Date(date).toLocaleDateString("en-US", {
+          {new Date(date).toLocaleDateString("pl-PL", {
             month: "short",
             day: "numeric",
             year: "numeric",

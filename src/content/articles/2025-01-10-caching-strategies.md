@@ -7,7 +7,18 @@ tags:
   - caching
   - redis
   - performance
+  - reactionary
 coverUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1640&auto=format&fit=crop"
+reactionaryContext: |
+  Ten wpis jest reakcją na masowe awarie systemów e-commerce, które miały miejsce w pierwszej połowie stycznia 2025 roku. Problemy z niewydolnością warstw cache'owania doprowadziły do paraliżu wielu popularnych platform.
+
+  Więcej o tych wydarzeniach przeczytasz w:
+  - [Analiza awarii na portalu TechNews](https://example.com/ecommerce-outage-2025)
+  - [Raport o stanie infrastruktury 2025](https://example.com/infrastructure-report)
+
+  ![Wykres obciążenia serwerów](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop)
+
+  Poniższy artykuł ma na celu dostarczenie wiedzy, która pozwoli uniknąć podobnych scenariuszy w przyszłości.
 ---
 
 Caching is essential for performance, but cache invalidation remains one of the hardest problems.

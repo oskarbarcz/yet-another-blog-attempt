@@ -10,6 +10,10 @@ tags:
 coverUrl: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1640&auto=format&fit=crop"
 ---
 
+# THIS ARTICLE WAS WRITTEN BY AI AS MOCK ARTICLE AND IT WILL BE REMOVED SOON. THIS IS JUST FOR TESTING PURPOSES.
+
+# TEN ARTYKUŁ ZOSTAŁ NAPISANY PRZEZ AI JAKO ARTYKUŁ TESTOWY I WKRÓTCE ZOSTANIE USUNIĘTY. POWSTAŁ TYLKO DO CELÓW TESTOWANIA.
+
 Securing APIs requires a multi-layered approach beyond just JWT tokens.
 We'll cover rate limiting, input sanitization, OWASP top 10 for APIs, and security headers.
 

@@ -16,5 +16,5 @@ export const SITE_NAME = "oskar's blog"; // og:site_name
 export const PUBLISHER_NAME = "Oskar Barcz";
 export const AUTHOR_NAME = "Oskar Barcz";
 export const AUTHOR_BIO =
-  "Programista pasjonujący się architekturą systemów, wydajnością oraz bezpieczeństwem. Na co dzień zgłębiam tajniki Reacta, Astro i nowoczesnych technologii webowych, dzieląc się praktyczną wiedzą bez zbędnego marketingu.";
+  "Lider zespołów w obszarze IT i architekt oprogramowania, który z pasją łączy świat komercyjnych innowacji z technologią w służbie społeczeństwu. Buduję mosty między światem technologii a inicjatywami społecznymi. Podejmuję się wyzwań, które wymagają strategicznego, systemowego podejścia, doskonałości technologicznej i inżynierskiej. Dzielę się wiedzą na scenie jak i na tym blogu.";
 export const AUTHOR_PHOTO = "https://github.com/oskarbarcz.png"; // Use GitHub profile photo as a reliable source

@@ -3,6 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import Meta from "../../components/shared/Meta.astro";
 import ArticleTags from "../../components/articles/ArticleTags.tsx";
 import AuthorSection from "../../components/articles/AuthorSection.tsx";
+import ReactionaryContext from "../../components/articles/ReactionaryContext.tsx";
+import ArchiveContext from "../../components/articles/ArchiveContext.tsx";
 import PhotoSwipeInit from "../../components/shared/PhotoSwipeInit";
 import type { CollectionEntry } from "astro:content";
 
@@ -70,7 +72,7 @@ const { Content } = await entry.render();
       >
         <time datetime={entry.data.date.toISOString()}>
           {
-            entry.data.date.toLocaleDateString(undefined, {
+            entry.data.date.toLocaleDateString("pl-PL", {
               year: "numeric",
               month: "long",
               day: "numeric",
@@ -83,16 +85,24 @@ const { Content } = await entry.render();
           entry.data.tags?.length ? (
             <>
               <span aria-hidden="true">•</span>
-              <ArticleTags
-                client:load
-                tags={entry.data.tags}
-                limit={entry.data.tags.length}
-              />
+              <ArticleTags client:load tags={entry.data.tags} />
             </>
           ) : null
         }
       </div>
     </header>
+
+    {entry.data.tags?.includes("archive") && <ArchiveContext client:load />}
+
+    {
+      entry.data.tags?.includes("reactionary") &&
+        entry.data.reactionaryContext && (
+          <ReactionaryContext
+            client:load
+            context={entry.data.reactionaryContext}
+          />
+        )
+    }
 
     <PhotoSwipeInit client:load />
 

@@ -1,5 +1,5 @@
 import { Button } from "flowbite-react";
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight, FaBoxArchive, FaCircleInfo } from "react-icons/fa6";
 import ArticleTags from "./ArticleTags";
 import ArticleMeta from "./ArticleMeta";
 import type { Article } from "./types";
@@ -9,6 +9,9 @@ interface ArticleCardProps {
 }
 
 export default function ArticleCard({ article }: ArticleCardProps) {
+  const isArchive = article.tags?.includes("archive");
+  const isReactionary = article.tags?.includes("reactionary");
+
   return (
     <article className="group hover:shadow-brand-500/10 relative flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-gray-800 dark:bg-gray-900/50 dark:backdrop-blur-sm">
       {article.coverUrl && (
@@ -20,15 +23,45 @@ export default function ArticleCard({ article }: ArticleCardProps) {
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </a>
+          <div className="absolute top-3 right-3 flex flex-col items-end gap-2">
+            {isArchive && (
+              <div className="flex items-center gap-1.5 rounded-full bg-amber-50/90 px-2.5 py-1 text-[10px] font-bold tracking-wider text-amber-700 shadow-sm backdrop-blur-sm dark:bg-amber-900/80 dark:text-amber-200">
+                <FaBoxArchive className="h-2.5 w-2.5" />
+                ARCHIWUM
+              </div>
+            )}
+            {isReactionary && (
+              <div className="bg-brand-50/90 text-brand-700 dark:bg-brand-900/80 dark:text-brand-200 flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-bold tracking-wider shadow-sm backdrop-blur-sm">
+                <FaCircleInfo className="h-2.5 w-2.5" />
+                REAKCJA
+              </div>
+            )}
+          </div>
         </div>
       )}
 
       <div className="flex flex-1 flex-col space-y-3 p-5">
         <div className="flex-1 space-y-2">
+          {!article.coverUrl && (isArchive || isReactionary) && (
+            <div className="flex flex-wrap items-center gap-3">
+              {isArchive && (
+                <div className="flex items-center gap-1.5 text-[10px] font-bold tracking-wider text-amber-600 dark:text-amber-400">
+                  <FaBoxArchive className="h-2.5 w-2.5" />
+                  ARCHIWUM
+                </div>
+              )}
+              {isReactionary && (
+                <div className="text-brand-600 dark:text-brand-400 flex items-center gap-1.5 text-[10px] font-bold tracking-wider">
+                  <FaCircleInfo className="h-2.5 w-2.5" />
+                  REAKCJA
+                </div>
+              )}
+            </div>
+          )}
           <h2 className="group-hover:text-brand-600 dark:group-hover:text-brand-400 text-xl leading-snug font-bold tracking-tight text-gray-900 transition-colors dark:text-white">
             <a href={`/articles/${article.slug}`}>{article.title}</a>
           </h2>
-          <p className="line-clamp-2 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+          <p className="line-clamp-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
             {article.excerpt}
           </p>
         </div>
