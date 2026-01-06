@@ -90,7 +90,7 @@ export default function Navigation() {
           <ul className="divide-y divide-gray-200 dark:divide-gray-800">
             <li>
               <a
-                href="/public"
+                href="/"
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-3 rounded-lg px-4 py-4 text-lg font-semibold text-gray-900 transition-colors hover:bg-gray-50 dark:text-gray-100 dark:hover:bg-gray-800/70"
               >
