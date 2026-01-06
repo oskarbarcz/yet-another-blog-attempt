@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Meta from "../../components/shared/Meta.astro";
 import ArticleTags from "../../components/articles/ArticleTags.tsx";
+import AuthorSection from "../../components/articles/AuthorSection.tsx";
 import PhotoSwipeInit from "../../components/shared/PhotoSwipeInit";
 import type { CollectionEntry } from "astro:content";
 
@@ -98,5 +99,7 @@ const { Content } = await entry.render();
     <article class="article-content pswp-gallery overflow-auto wrap-break-word">
       <Content />
     </article>
+
+    <AuthorSection />
   </main>
 </Layout>

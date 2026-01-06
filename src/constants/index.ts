@@ -15,3 +15,6 @@ export const OG_LOCALE = "pl_PL";
 export const SITE_NAME = "oskar's blog"; // og:site_name
 export const PUBLISHER_NAME = "Oskar Barcz";
 export const AUTHOR_NAME = "Oskar Barcz";
+export const AUTHOR_BIO =
+  "Programista pasjonujący się architekturą systemów, wydajnością oraz bezpieczeństwem. Na co dzień zgłębiam tajniki Reacta, Astro i nowoczesnych technologii webowych, dzieląc się praktyczną wiedzą bez zbędnego marketingu.";
+export const AUTHOR_PHOTO = "https://github.com/oskarbarcz.png"; // Use GitHub profile photo as a reliable source
