@@ -17,7 +17,7 @@ const events = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(), // event name
-    role: z.enum(["guest", "speaker", "panelist", "participant"]),
+    role: z.enum(["guest", "speaker", "panelist", "participant", "organizer"]),
     date: z.date(),
     city: z.string(),
     description: z.string(),

@@ -14,7 +14,7 @@ export interface EventLinks {
 
 export interface EventItemData {
   title: string;
-  role: "guest" | "speaker" | "panelist" | "participant";
+  role: "guest" | "speaker" | "panelist" | "participant" | "organizer";
   date: string; // ISO
   city: string;
   description: string;
