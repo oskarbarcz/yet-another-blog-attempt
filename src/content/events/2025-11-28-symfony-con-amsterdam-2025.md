@@ -1,5 +1,5 @@
 ---
-title: "SymfonyCon Amsterdam 2025"
+title: "SymfonyCon Amsterdam 2025 - prezentacja \"CQRS: yes, but slow down\" "
 role: speaker
 date: 2025-11-28
 city: "Amsterdam, Holandia"
