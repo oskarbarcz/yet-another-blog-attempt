@@ -8,7 +8,7 @@ readTime: "11 min"
 tags:
   - recruitment
   - hr
-coverUrl: "https://media.licdn.com/dms/image/v2/D4D22AQG7gdJDibvlbg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1710253774016?e=1769040000&v=beta&t=B9XbwNKt0JjpzxybcL3Z_H-z4pLzFIRK79HbvxVAt10"
+coverUrl: "https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
 
 ## Dlaczego nowoczesna rekrutacja techniczna nie ma szans działać?
