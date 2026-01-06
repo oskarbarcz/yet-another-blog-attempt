@@ -9,6 +9,7 @@ const articles = defineCollection({
     readTime: z.string(),
     tags: z.array(z.string()).default([]),
     coverUrl: z.string().url().optional(),
+    reactionaryContext: z.string().optional(),
   }),
 });
 

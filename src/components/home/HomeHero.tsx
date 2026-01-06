@@ -13,23 +13,24 @@ export default function HomeHero() {
             moim cyfrowym ogrodzie
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600 dark:text-gray-400">
-            Dzielę się tym, czego się uczę: architekturą, wydajnością,
-            bezpieczeństwem API oraz praktycznymi wzorcami w React i Astro. Bez
-            marketingu — tylko wiedza i notatki z praktyki.
+            Zawodowo jestem lideren zespołów w obszarze IT i architektem
+            oprogramowania, który z pasją łączy świat komercyjnych innowacji z
+            technologią w służbie społeczeństwu. Na tym blogu zamierzam opisywać
+            swoje przemyślenia oraz publikować dłuższe treści specjalistyczne.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="/articles"
               className="bg-brand-600 hover:bg-brand-700 focus:ring-brand-500 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white shadow focus:ring-2 focus:outline-none"
             >
-              Zobacz publikacje
+              Zobacz moje publikacje
               <FaArrowRight className="h-4 w-4" />
             </a>
             <a
               href="/events"
               className="hover:text-brand-600 hover:border-brand-300 dark:hover:text-brand-400 inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 dark:border-gray-700 dark:bg-gray-900/50 dark:text-gray-300"
             >
-              Zobacz wydarzenia
+              Zobacz wydarzenia w których brałem udział
               <FaArrowRight className="h-4 w-4" />
             </a>
           </div>
