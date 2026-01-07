@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import ArticlesList from "../components/articles/ArticlesList.tsx";
 import Meta from "../components/shared/Meta.astro";
 import Layout from "../layouts/Layout.astro";
+import { ARTICLES_PAGE_DESCRIPTION } from "../constants";
 
 // Fetch all articles from the content collection
 const allArticles = await getCollection("articles");
@@ -26,7 +27,13 @@ const articles = allArticles
   <Meta
     slot="head"
     title="Wszystkie publikacje"
-    description="Lista publikacji: architektura, wydajność, bezpieczeństwo API, React i Astro."
+    description={ARTICLES_PAGE_DESCRIPTION}
+    keywords={[
+      "blog",
+      "artykuły IT",
+      "architektura oprogramowania",
+      "programowanie",
+    ]}
   />
   <ArticlesList articles={articles} client:load />
 </Layout>

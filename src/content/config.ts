@@ -8,6 +8,7 @@ const articles = defineCollection({
     date: z.date(),
     readTime: z.string(),
     tags: z.array(z.string()).default([]),
+    keywords: z.array(z.string()).optional(),
     coverUrl: z.string().url().optional(),
     reactionaryContext: z.string().optional(),
   }),

@@ -11,6 +11,13 @@ tags:
   - social responsibility
   - cybersecurity
   - cyberawareness
+keywords:
+  - cyberbezpieczeństwo
+  - sztuczna inteligencja
+  - AI security
+  - oszustwa AI
+  - edukacja cyfrowa
+  - bezpieczeństwo seniorów
 coverUrl: "https://media.licdn.com/dms/image/v2/D4D22AQG7gdJDibvlbg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1710253774016?e=1769040000&v=beta&t=B9XbwNKt0JjpzxybcL3Z_H-z4pLzFIRK79HbvxVAt10"
 ---
 

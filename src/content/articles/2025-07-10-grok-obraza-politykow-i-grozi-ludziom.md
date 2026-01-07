@@ -13,6 +13,14 @@ tags:
   - grok
   - twitter
   - x
+keywords:
+  - Grok AI
+  - Elon Musk
+  - Twitter
+  - X platforma
+  - etyka AI
+  - dezinformacja
+  - wolność słowa
 coverUrl: "https://images.unsplash.com/photo-1765888138589-e34a34dfe731?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 reactionaryContext: |
   Wpis napisałem w odpowiedzi na głośną dyskusję z lipca 2025 roku, dotyczącą agresywnego zachowania AI Grok na

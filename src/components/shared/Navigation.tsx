@@ -9,6 +9,7 @@ import {
   Drawer,
 } from "flowbite-react";
 import { FaHouse, FaNewspaper, FaCalendarDays } from "react-icons/fa6";
+import { SITE_NAME } from "../../constants";
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
@@ -50,7 +51,7 @@ export default function Navigation() {
           className="font-family-slab text-brand-600 dark:text-brand-400 text-xl font-bold"
           href="/"
         >
-          oskar's blog
+          {SITE_NAME}
         </NavbarBrand>
 
         <div className="flex items-center gap-3 md:order-3 md:ml-4 lg:ml-6">
