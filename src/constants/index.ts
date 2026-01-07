@@ -6,10 +6,10 @@ export const DEFAULT_SITE_DESCRIPTION =
   "Zawodowo jestem liderem zespołów w obszarze IT i architektem oprogramowania, który z pasją łączy świat komercyjnych innowacji z technologią w służbie społeczeństwu. Na tym blogu zamierzam opisywać swoje przemyślenia oraz publikować dłuższe treści specjalistyczne.";
 
 export const HOMEPAGE_DESCRIPTION =
-  "Mój cyfrowy ogród: publikacje o architekturze, wydajności, bezpieczeństwie API oraz React/Astro.";
+  "oskar_blog to blog i strona osobista Oskara Barcza, senior full‑stack developera, który zawodowo tworzy oprogramowanie, występuje na konferencjach i działa w społeczności technologicznej.";
 
 export const ARTICLES_PAGE_DESCRIPTION =
-  "Lista publikacji: architektura, wydajność, bezpieczeństwo API, React i Astro.";
+  "Lista artykułów, które koncentrują się na praktycznych aspektach budowy skalowalnych aplikacji, dobrej architekturze i jakości kodu, bazując na realnych projektach autora.";
 
 export const EVENTS_PAGE_DESCRIPTION =
   "Wystąpienia, panele i spotkania — oś czasu wydarzeń, w których brałem/brałam udział.";

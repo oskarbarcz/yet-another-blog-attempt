@@ -4,8 +4,7 @@ import type { APIRoute } from "astro";
 import satoriLib from "satori";
 import fs from "node:fs";
 import path from "node:path";
-import { AUTHOR_NAME, AUTHOR_PHOTO } from "../../../constants";
-
+import { AUTHOR_NAME, AUTHOR_PHOTO, BRAND_COLOR } from "../../../constants";
 const satori = satoriLib as unknown as (
   // “anything in, promise of string out”
   jsx: any,
@@ -97,11 +96,11 @@ export const GET: APIRoute = async ({ props }) => {
               left: "60px",
               fontSize: "64px",
               fontWeight: 700,
-              color: "#40bf7e",
+              color: BRAND_COLOR,
               display: "flex",
-              textShadow: "0 4px 20px rgba(0,0,0,0.8)",
+              textShadow: "0 4px 20px rgba(0,0,0,1)",
             },
-            children: "oskar_blog",
+            children: "oskar-blog",
           },
         },
         {
@@ -136,7 +135,7 @@ export const GET: APIRoute = async ({ props }) => {
                   style: {
                     width: "150px",
                     height: "12px",
-                    backgroundColor: "#40bf7e",
+                    backgroundColor: BRAND_COLOR,
                     marginBottom: "40px",
                     display: "flex",
                   },
@@ -194,10 +193,10 @@ export const GET: APIRoute = async ({ props }) => {
                             type: "div",
                             props: {
                               style: {
-                                color: "rgba(255, 255, 255, 0.5)",
+                                color: BRAND_COLOR,
                                 margin: "0 24px",
                               },
-                              children: "/",
+                              children: "-",
                             },
                           },
                           {
@@ -208,10 +207,10 @@ export const GET: APIRoute = async ({ props }) => {
                             type: "div",
                             props: {
                               style: {
-                                color: "rgba(255, 255, 255, 0.5)",
+                                color: BRAND_COLOR,
                                 margin: "0 24px",
                               },
-                              children: "/",
+                              children: "-",
                             },
                           },
                           { type: "div", props: { children: readTime } },
