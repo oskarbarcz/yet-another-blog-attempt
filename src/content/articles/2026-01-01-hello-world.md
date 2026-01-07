@@ -7,6 +7,13 @@ readTime: "5 min"
 tags:
   - hello
   - world
+keywords:
+  - powitanie
+  - blog osobisty
+  - technologia i społeczeństwo
+  - programowanie
+  - cyfrowy ogród
+  - Oskar Barcz
 coverUrl: "https://miro.medium.com/1*veRna0Vbw1_4OUnzW9rSzA.jpeg"
 ---
 

@@ -8,6 +8,7 @@ import {
   SITE_NAME,
   PUBLISHER_NAME,
   AUTHOR_NAME,
+  TWITTER_HANDLE,
 } from "../../constants";
 
 interface Props {
@@ -19,6 +20,7 @@ interface Props {
   publishedTime?: string; // ISO string
   modifiedTime?: string; // ISO string
   authorName?: string;
+  keywords?: string[];
 }
 
 const {
@@ -30,11 +32,20 @@ const {
   publishedTime,
   modifiedTime,
   authorName,
+  keywords,
 } = Astro.props as Props;
 
 const effectiveTitle = `${title ?? DEFAULT_SITE_TITLE}${SITE_TITLE_SUFFIX}`;
 const effectiveDescription = description ?? DEFAULT_SITE_DESCRIPTION;
-const twitterCard = image ? "summary_large_image" : "summary";
+
+const resolveImage = (img?: string) => {
+  if (!img) return undefined;
+  if (img.startsWith("http://") || img.startsWith("https://")) return img;
+  return `${SITE_ORIGIN}${img.startsWith("/") ? "" : "/"}${img}`;
+};
+
+const effectiveImage = resolveImage(image);
+const twitterCard = effectiveImage ? "summary_large_image" : "summary";
 const canonical =
   url && (url.startsWith("http://") || url.startsWith("https://"))
     ? url
@@ -44,7 +55,10 @@ const resolvedAuthor = authorName ?? AUTHOR_NAME;
 ---
 
 <!-- Primary Meta Tags -->
+<meta name="title" content={effectiveTitle} />
 <meta name="description" content={effectiveDescription} />
+<meta name="author" content={resolvedAuthor} />
+{keywords && <meta name="keywords" content={keywords.join(", ")} />}
 <meta name="robots" content="index,follow" />
 
 <!-- Open Graph / Facebook -->
@@ -52,25 +66,30 @@ const resolvedAuthor = authorName ?? AUTHOR_NAME;
 <meta property="og:title" content={effectiveTitle} />
 <meta property="og:description" content={effectiveDescription} />
 <meta property="og:url" content={canonical} />
-{image && <meta property="og:image" content={image} />}
+{effectiveImage && <meta property="og:image" content={effectiveImage} />}
 <meta property="og:site_name" content={SITE_NAME} />
 <meta property="og:locale" content={OG_LOCALE} />
 {
-  type === "article" && publishedTime && (
-    <meta property="article:published_time" content={publishedTime} />
-  )
-}
-{
-  type === "article" && modifiedTime && (
-    <meta property="article:modified_time" content={modifiedTime} />
+  type === "article" && (
+    <>
+      <meta property="article:author" content={resolvedAuthor} />
+      {publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
+    </>
   )
 }
 
 <!-- Twitter -->
 <meta name="twitter:card" content={twitterCard} />
+<meta name="twitter:site" content={TWITTER_HANDLE} />
+<meta name="twitter:creator" content={TWITTER_HANDLE} />
 <meta name="twitter:title" content={effectiveTitle} />
 <meta name="twitter:description" content={effectiveDescription} />
-{image && <meta name="twitter:image" content={image} />}
+{effectiveImage && <meta name="twitter:image" content={effectiveImage} />}
 
 <link rel="canonical" href={canonical} />
 
@@ -85,9 +104,12 @@ const resolvedAuthor = authorName ?? AUTHOR_NAME;
         "@type": "WebSite",
         name: SITE_NAME,
         url: SITE_ORIGIN,
+        description: effectiveDescription,
         publisher: {
           "@type": "Person",
           name: PUBLISHER_NAME,
+          url: SITE_ORIGIN,
+          image: resolveImage("/apple-touch-icon.png"),
         },
       })}
     />
@@ -95,7 +117,7 @@ const resolvedAuthor = authorName ?? AUTHOR_NAME;
 }
 
 {
-  type === "article" && publishedTime && (
+  type === "article" && (
     <script
       type="application/ld+json"
       is:inline
@@ -106,17 +128,61 @@ const resolvedAuthor = authorName ?? AUTHOR_NAME;
         description: effectiveDescription,
         datePublished: publishedTime,
         ...(modifiedTime ? { dateModified: modifiedTime } : {}),
-        mainEntityOfPage: canonical,
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": canonical,
+        },
         author: {
           "@type": "Person",
           name: resolvedAuthor,
+          url: SITE_ORIGIN,
         },
         publisher: {
           "@type": "Person",
           name: PUBLISHER_NAME,
+          url: SITE_ORIGIN,
         },
-        ...(image ? { image } : {}),
+        ...(effectiveImage
+          ? {
+              image: {
+                "@type": "ImageObject",
+                url: effectiveImage,
+              },
+            }
+          : {}),
       })}
     />
   )
 }
+
+<script
+  type="application/ld+json"
+  is:inline
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: Astro.url.pathname
+      .split("/")
+      .filter(Boolean)
+      .reduce(
+        (acc, curr, i, arr) => {
+          const url = `/${arr.slice(0, i + 1).join("/")}`;
+          acc.push({
+            "@type": "ListItem",
+            position: i + 2,
+            name: curr.charAt(0).toUpperCase() + curr.slice(1),
+            item: `${SITE_ORIGIN}${url}`,
+          });
+          return acc;
+        },
+        [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: SITE_ORIGIN,
+          },
+        ]
+      ),
+  })}
+/>

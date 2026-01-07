@@ -9,6 +9,13 @@ tags:
   - archive
   - summary
   - worldview
+keywords:
+  - podsumowanie roku
+  - "2024"
+  - rozwój osobisty
+  - kariera IT
+  - podróże
+  - Fundacja Generacja Innowacja
 coverUrl: "https://images.unsplash.com/photo-1701170633885-7209b1bf10ee?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
 
