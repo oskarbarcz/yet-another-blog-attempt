@@ -5,7 +5,11 @@ import { getCollection } from "astro:content";
 import HomeHero from "../components/home/HomeHero";
 import HomeLatestArticles from "../components/home/HomeLatestArticles";
 import HomeLatestEvents from "../components/home/HomeLatestEvents";
-import { HOMEPAGE_LATEST_COUNT } from "../constants";
+import {
+  HOMEPAGE_LATEST_COUNT,
+  HOMEPAGE_DESCRIPTION,
+  DEFAULT_SITE_TITLE,
+} from "../constants";
 
 const allArticles = await getCollection("articles");
 const latestArticles = allArticles
@@ -34,12 +38,19 @@ const latestEvents = allEvents
 ---
 
 <Layout>
-  <Fragment slot="title">Mój cyfrowy ogród</Fragment>
+  <Fragment slot="title">{DEFAULT_SITE_TITLE}</Fragment>
   <Meta
     slot="head"
-    title="Mój cyfrowy ogród"
-    description="Mój cyfrowy ogród: publikacje o architekturze, wydajności, bezpieczeństwie API oraz React/Astro."
-    keywords={["architektura IT", "programowanie", "React", "Astro", "API", "bezpieczeństwo IT"]}
+    title={DEFAULT_SITE_TITLE}
+    description={HOMEPAGE_DESCRIPTION}
+    keywords={[
+      "architektura IT",
+      "programowanie",
+      "React",
+      "Astro",
+      "API",
+      "bezpieczeństwo IT",
+    ]}
   />
   <main>
     <HomeHero />

@@ -34,7 +34,7 @@ const { Content } = await entry.render();
     description={entry.data.excerpt}
     type="article"
     publishedTime={entry.data.date.toISOString()}
-    image={entry.data.coverUrl}
+    image={`/articles/${entry.slug}/thumbnail.png`}
     keywords={entry.data.keywords ?? entry.data.tags}
   />
   <main

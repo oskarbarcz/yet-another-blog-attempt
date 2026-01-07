@@ -1,5 +1,6 @@
 import { Footer as FlowbiteFooter, FooterCopyright } from "flowbite-react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa6";
+import { SOCIAL_LINKS, PUBLISHER_NAME } from "../../constants";
 
 export default function Footer() {
   return (
@@ -11,16 +12,15 @@ export default function Footer() {
         <div className="flex w-full flex-col items-center justify-between gap-3 py-4 md:flex-row">
           <div className="text-sm text-gray-600 dark:text-gray-400">
             <FooterCopyright
-              href="https://barcz.me"
-              rel="noopener noreferrer"
-              by="Oskar Barcz"
+              href="/"
+              by={PUBLISHER_NAME}
               year={new Date().getFullYear()}
             />
           </div>
 
           <div className="flex items-center gap-3">
             <a
-              href="https://facebook.com/oskarbarcz"
+              href={SOCIAL_LINKS.facebook}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-brand-600 dark:hover:text-brand-400 text-gray-500 transition-colors dark:text-gray-400"
@@ -29,7 +29,7 @@ export default function Footer() {
               <FaFacebook className="h-5 w-5" />
             </a>
             <a
-              href="https://instagram.com/oskar.barcz"
+              href={SOCIAL_LINKS.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-brand-600 dark:hover:text-brand-400 text-gray-500 transition-colors dark:text-gray-400"
@@ -38,7 +38,7 @@ export default function Footer() {
               <FaInstagram className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com/in/oskarbarcz"
+              href={SOCIAL_LINKS.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-brand-600 dark:hover:text-brand-400 text-gray-500 transition-colors dark:text-gray-400"
@@ -47,7 +47,7 @@ export default function Footer() {
               <FaLinkedin className="h-5 w-5" />
             </a>
             <a
-              href="https://github.com/oskarbarcz"
+              href={SOCIAL_LINKS.github}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-brand-600 dark:hover:text-brand-400 text-gray-500 transition-colors dark:text-gray-400"
