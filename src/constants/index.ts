@@ -12,7 +12,7 @@ export const ARTICLES_PAGE_DESCRIPTION =
   "Lista artykułów, które koncentrują się na praktycznych aspektach budowy skalowalnych aplikacji, dobrej architekturze i jakości kodu, bazując na realnych projektach autora.";
 
 export const EVENTS_PAGE_DESCRIPTION =
-  "Wystąpienia, panele i spotkania — oś czasu wydarzeń, w których brałem/brałam udział.";
+  "Wystąpienia, panele i spotkania — oś czasu wydarzeń, w których brałem udział.";
 
 export const HOMEPAGE_LATEST_COUNT = 3;
 
