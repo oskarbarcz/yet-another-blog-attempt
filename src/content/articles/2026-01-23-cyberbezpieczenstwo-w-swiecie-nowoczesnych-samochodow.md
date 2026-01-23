@@ -45,27 +45,32 @@ coverUrl: "https://images.unsplash.com/photo-1634804519576-d7047c5b39d6?fm=jpg&q
 Zanim odpowiemy sobie na podstawowe pytania, zacznijmy od kontekstu. Aby w pełni zrozumieć zagadnienia cyberbezpieczeństwa stosowane w dzisiejszych pojazdach, omówię wstępnie jakie rodzaje urządzeń elektronicznych są dzisiaj podstawą działania systemów pokładowych w nowoczesnych samochodach.
 
 Pierwszym z nich jest **TCU** (**Telematics Control Unit**, Jednostka Sterująca Telematyką): to system komunikacyjny łączący pojazd z internetem, umożliwiający śledzenie, zdalną diagnostykę i zdalną komunikację. TCU wewnętrznie zawiera najczęściej moduł komórkowy (LTE/5G) z modułem eSIM, często również odbiornik GPS. TCU przetwarza między innymi:
+
 - dokładną lokalizację pojazdu w trybie rzeczywistym,
 - dokładne dane o stanie pojazdu: błędy wewnętrzne, alerty, przebieg, poziom paliwa / baterii, temperatury na zewnątrz i wewnątrz pojazdu,
 - poprzez wbudowany akcelerometr: styl jazdy (nagłe hamowanie / przyśpieszenie, prędkość bieżącą, średnią, czas jazdy),
 - identyfikatory pojazdu: nr modułów, nr VIN pojazdu, informacje o subskrypcjach czy zakupionym poziomie wyposażenia.
 
 Drugim najpopularniejszym systemem jest tzw. **Infotainment**. Jest to główny „interfejs” auta, ale także wielki kolektor danych o użytkowniku. W zależności od producenta i od stopnia wyposażenia może przetwarzać on między innymi:
+
 - wyszukiwane adresy, w tym te zapisane jako „dom”, „praca”, ostatnie trasy,
 - kontakty zaimportowane z telefonu poprzez system Bluetooth,
 - dane multimedialne i preferencje (w tym na przykład tokeny logowania do Spotify / Tidal / Apple Music) w zależności od producenta i stopnia wyposażenia.
-Warto wspomnieć, że w przypadku, gdy korzystamy z systemów takich jak Android Auto lub Apple CarPlay, znaczna część informacji jest przesyłana w sposób szyfrowany, który jest niedostępny do odczytu poprzez tradycyjny system Infotainment — z wyjątkiem informacji takich jak następny manewr nawigacji czy aktualnie odtwarzany utwór.
+  Warto wspomnieć, że w przypadku, gdy korzystamy z systemów takich jak Android Auto lub Apple CarPlay, znaczna część informacji jest przesyłana w sposób szyfrowany, który jest niedostępny do odczytu poprzez tradycyjny system Infotainment — z wyjątkiem informacji takich jak następny manewr nawigacji czy aktualnie odtwarzany utwór.
 
 Trzecim rodzajem systemów są systemy jazdy autonomicznej / **ADAS** (**Advanced Driver Assistance Systems**, zaawansowane systemy wspomagania kierowcy). Systemy takie jak lane assist, adaptywny tempomat, autopilot wykorzystują wiele sensorów takich jak czujniki zbliżeniowe, LIDAR, kamery, aby móc ocenić i zrozumieć otoczenie pojazdu, a następnie wspierać kierowcę. Systemy te przetwarzają więc dane takie jak:
+
 - obraz z kamer (droga, piesi, budynki i przeszkody dookoła, tablice rejestracyjne, znaki drogowe)
 - dane z radarów / sonarów / LIDARów (odległość od przeszkód, prędkość dynamiczna względem innych pojazdów, dokładne plany przestrzenne otoczenia),
 - mapy wysokiej rozdzielczości, w tym plany parkingów, miejsc parkingowych, niektóre pojazdy nawet potrafią „zapamiętać” które miejsce parkingowe w garażu podziemnym jest nasze.
 
 Czwarty rodzaj elektroniki to sterowniki pokładowe takie jak **ECU** (**Electronic Control Unit**), magistrala **CAN** (**Controller Area Network**). Te mikrokomputery przetwarzają informacje takie jak:
+
 - ilość obrotów silnika na minutę, moment obrotowy, temperatura, ciśnienie w oponach, stany poszczególnych czujników,
 - w pojazdach elektrycznych także napięcia poszczególnych ogniw oraz ich temperatury, cykle ładowania i szczegóły zużycia prądu
 
 Piątym rodzajem mikrokomputerów są moduły komfortu i personalizacji. To między innymi system bezkluczykowy, profile użytkowników, zapamiętane ustawienia foteli, klimatyzacji, ulubionej stacji radiowej, rozpoznawanie osób. Przetwarzają takie informacje jak:
+
 - ustawienia fotela, lusterek, klimatyzacji,
 - waga pasażera lub numer użytego kluczyka (w te sposoby najczęściej pojazdy rozróżniają kierowcę),
 - elementy małej biometrii takie jak rozpoznawanie twarzy / głosu.
@@ -88,9 +93,7 @@ Badając przyczyny, warto spojrzeć na to, kto w Polsce kupuje nowe pojazdy. Bad
 
 **Bezpieczeństwo kierowcy**, niezależnie od tego, kim on jest, również polega na systemach informatycznych. Mózg człowieka ma szereg wad strukturalnych i funkcjonalnych, ograniczone możliwości skupienia się i przetwarzania informacji. Kora przedczołowa, odpowiedzialna za planowanie i świadome podejmowanie decyzji, może jednocześnie przetrzymać tylko kilka informacji w pamięci krótkotrwałej. Podczas jazdy w gęstym ruchu kierowca musi monitorować dziesiątki zmiennych jednocześnie — prędkość, odległość od innych pojazdów, znaki drogowe, pieszych i sygnalizację świetlną. Adaptywny tempomat i asystent pasa ruchu przejmują część tych zadań, odciążając ograniczoną pojemność poznawczą mózgu. Sam samochód, ze względu na swoją konstrukcję zawiera tzw. martwe strefy, czyli miejsca dookoła pojazdu, które są niewidoczne dla kierowcy siedzącego wewnątrz pojazdu. W przypadku jazdy z większą prędkością pojawia się także problem nazywany _widzeniem tunelowym_: podczas koncentracji na jednym zadaniu mózg ogranicza skanowanie otoczenia. Systemy monitorowania martwego pola i kamery 360 stopni eliminują te ślepe punkty percepcyjne, które są naturalnym ograniczeniem ludzkiego pola widzenia.
 
-
 ## Intencje cyfryzacji
-
 
 **Na rynku istnieje wiele grup interesów, którym zależy na cyfryzacji w motoryzacji.** Nie jest ona więc wynikiem spisku, czy złych intencji producentów, lecz naturalną odpowiedzią na realne potrzeby rynku i ograniczenia ludzkiego organizmu. Systemy telematyczne i komputery pokładowe powstały, aby uczynić pojazdy bezpieczniejszymi, bardziej funkcjonalnymi i łatwiejszymi w zarządzaniu dla różnych grup użytkowników. Problem pojawia się wtedy, gdy ta sama infrastruktura, która ma chronić kierowcę przed wypadkiem lub ułatwić mu codzienne użytkowanie, staje się narzędziem inwigilacji lub wektorem ataku. Dane zbierane pierwotnie w celu optymalizacji zużycia paliwa, monitorowania stanu technicznego czy usprawnienia nawigacji, mogą zostać wykorzystane do śledzenia ruchów konkretnych osób, profilowania zachowań lub — w przypadku producentów z krajów autorytarnych, wrogich nam — do celów wywiadowczych.
 
@@ -119,12 +122,14 @@ Pojawia się pytanie, dlaczego polskie wojsko nie nałożyło analogicznego zaka
 ## Co możemy zrobić?
 
 Jednym z takich rozwiązań, jest skorzystanie z dobrodziejstwa europejskiego prawa. W ramach regulacji o ochronie danych Unii Europejskiej możesz złożyć trzy typy wniosków do producenta pojazdu:
+
 - prawo do rezygnacji: zaprzestanie sprzedaży lub udostępniania danych osobowych firmom trzecim, w tym brokerom danych i ubezpieczycielom
 - prawo do usunięcia danych: trwałe i kompletne usunięcie danych przez producenta, usługodawców i podwykonawców
 
 Po pierwsze, korzystanie z praw wynikających z RODO jest środkiem wyłącznie retrospektywnym: możesz żądać zaprzestania sprzedaży danych lub ich usunięcia dopiero wtedy, gdy zostały już zebrane, przetworzone i potencjalnie zbackupowane oraz skopiowane do wielu systemów analitycznych. Formalne „usunięcie” nie cofa śladów w logach, backupach czy modelach analitycznych, które mogły zostać już wytrenowane na Twoich danych.
 
 Z bardziej praktycznych rad, możemy spróbować wykorzystać możliwości producenta:
+
 - wyłączenie aplikacji mobilnej producenta lub ograniczenie jej uprawnień do śledzenia lokalizacji i udostępniania danych
 - zmiana ustawień prywatności przez połączoną aplikację mobilną (np. Toyota i Lexus pozwalają na zarządzanie ustawieniami przez zakładkę "Data Privacy Portal" w aplikacji)
 - włączenie trybu prywatności, jeśli pojazd go oferuje
