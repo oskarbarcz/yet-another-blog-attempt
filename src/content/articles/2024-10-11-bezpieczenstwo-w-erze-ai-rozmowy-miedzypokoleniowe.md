@@ -18,7 +18,7 @@ keywords:
   - oszustwa AI
   - edukacja cyfrowa
   - bezpieczeństwo seniorów
-coverUrl: "https://media.licdn.com/dms/image/v2/D4D22AQG7gdJDibvlbg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1710253774016?e=1769040000&v=beta&t=B9XbwNKt0JjpzxybcL3Z_H-z4pLzFIRK79HbvxVAt10"
+coverUrl: "https://scontent-waw2-2.xx.fbcdn.net/v/t39.30808-6/492316667_3080864065400905_5087531052426631231_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JOOttm6MyYQQ7kNvwFULFRD&_nc_oc=AdkWRuNfJdhCcICz2CIK0AylAql1cjzg83At1BerqgOUEqTO2D6DZm5AE7GYUpdYaaqOrfSZTzCqOqvLAnjKaprd&_nc_zt=23&_nc_ht=scontent-waw2-2.xx&_nc_gid=PfBw9lqJWJKLnENTOnEe6A&oh=00_AfrTCtT4tsVjV8u7Gr6Zk8XYITSgv8PJPeAbVOsZ1QCMHg&oe=6979439B"
 ---
 
 W obliczu szybko rozwijających się technologii AI, które mają zdolność do imitowania głosów i tworzenia przekonujących
