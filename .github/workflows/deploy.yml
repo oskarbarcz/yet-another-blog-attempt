@@ -3,6 +3,8 @@ name: deploy
 on:
   push:
     branches: ["main"]
+  repository_dispatch:
+    types: [ deploy-blog ]
 
 permissions:
   contents: write
@@ -14,6 +16,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  trigger:
+    if: github.event_name == 'repository_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Triggered by content repository!, version ${{ github.event.client_payload.version }}"
   build:
     runs-on: ubuntu-latest
     steps:
@@ -34,6 +41,7 @@ jobs:
           path: ./dist
 
   release:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
