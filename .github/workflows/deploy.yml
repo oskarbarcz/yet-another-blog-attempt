@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
   repository_dispatch:
-    types: [ deploy-blog ]
+    types: [deploy-blog]
 
 permissions:
   contents: write
