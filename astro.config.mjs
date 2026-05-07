@@ -7,7 +7,10 @@ import flowbiteReact from "flowbite-react/plugin/astro";
 
 export default defineConfig({
   site: "https://blog.barcz.me",
-  prefetch: true,
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: "hover",
+  },
   integrations: [react(), flowbiteReact(), sitemap()],
   vite: {
     // @ts-ignore - Plugin type mismatch between Astro's bundled Vite and local Vite

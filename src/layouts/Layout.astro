@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import "../styles/article.css";
+import { ClientRouter } from "astro:transitions";
 import { ThemeModeScript } from "flowbite-react";
 import { ThemeInit } from "../../.flowbite-react/init";
 import Navigation from "../components/shared/Navigation.tsx";
@@ -38,6 +39,7 @@ import { DEFAULT_SITE_TITLE, SITE_TITLE_SUFFIX } from "../constants";
       rel="stylesheet"
     />
     <ThemeModeScript client:load />
+    <ClientRouter />
   </head>
   <body class="flex min-h-dvh flex-col">
     <ThemeInit />
